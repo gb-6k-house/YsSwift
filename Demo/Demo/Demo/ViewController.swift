@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Demo
 //
-//  Created by niupark on 2017/9/30.
+//  Created by liukai on 2017/9/30.
 //  Copyright © 2017年 尧尚信息科技. All rights reserved.
 //
 
@@ -13,10 +13,10 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let s = "         hello world      "
+        let ysKit = YSKitTest()
+        ysKit.testString()
         
-        // Do any additional setup after loading the view, typically from a nib.
-        print("\(s.ys.trim())")
+        
     }
 
     override func didReceiveMemoryWarning() {

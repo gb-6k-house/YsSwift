@@ -1,3 +1,6 @@
+[![platform-image]]()
+[![lic-image]](LICENSE)
+
 >---
 - **[Introduction](#introduction)**
 - **[Requirements](#Requirements)**
@@ -5,7 +8,7 @@
 
 >---
 ## Introduction
-    YSKit supply variable function classes for iOS  written in Swift .for examples:
+   Variable functions programming in Swift. For examples:
 - **[YSKit](Documentation/Animal.md)**
 
     This SDK supply some common Swift base functions, like string catgory, data catgory etc. [How to use](Documentation/Animal.md)
@@ -43,3 +46,10 @@ target 'YOUR_TARGET_NAME' do
     pod 'YSKit/Rabbit',    '~> 0.0.1'
 end
 ```
+
+
+
+
+[lic-image]: https://img.shields.io/dub/l/vibe-d.svg
+[platform-image]: https://img.shields.io/badge/platform-iOS-orange.svg
+[building-image]: https://img.shields.io/travis/USER/REPO.svg

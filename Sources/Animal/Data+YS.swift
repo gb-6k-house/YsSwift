@@ -8,13 +8,25 @@
 
 import Foundation
 
-extension Data {
 
+public class YSDataCompatible {
+    public let base: Data
+    public init(_ base: Data) {
+        self.base = base
+    }
+}
+
+public extension Data {
+    public var ys: YSDataCompatible {
+        return YSDataCompatible(self)
+    }
+}
+
+extension YSDataCompatible {
     public func utf8String() -> String {
-        if let str = NSString(data: self, encoding: String.Encoding.utf8.rawValue) {
+        if let str = NSString(data: self.base, encoding: String.Encoding.utf8.rawValue) {
             return str as String
         }
         return ""
     }
-
 }

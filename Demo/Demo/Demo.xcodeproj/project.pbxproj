@@ -13,6 +13,7 @@
 		7B74D0D81F7FC88100FBBAA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B74D0D61F7FC88100FBBAA0 /* Main.storyboard */; };
 		7B74D0DA1F7FC88100FBBAA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B74D0D91F7FC88100FBBAA0 /* Assets.xcassets */; };
 		7B74D0DD1F7FC88100FBBAA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B74D0DB1F7FC88100FBBAA0 /* LaunchScreen.storyboard */; };
+		7B76AF281F812FF5003C23C7 /* YSKitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B76AF271F812FF5003C23C7 /* YSKitTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		7B74D0D91F7FC88100FBBAA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B74D0DC1F7FC88100FBBAA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B74D0DE1F7FC88100FBBAA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B76AF271F812FF5003C23C7 /* YSKitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSKitTest.swift; sourceTree = "<group>"; };
 		947F3B153D87DD6ABAA2F869 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +77,7 @@
 				7B74D0D91F7FC88100FBBAA0 /* Assets.xcassets */,
 				7B74D0DB1F7FC88100FBBAA0 /* LaunchScreen.storyboard */,
 				7B74D0DE1F7FC88100FBBAA0 /* Info.plist */,
+				7B76AF271F812FF5003C23C7 /* YSKitTest.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 			files = (
 				7B74D0D51F7FC88100FBBAA0 /* ViewController.swift in Sources */,
 				7B74D0D31F7FC88100FBBAA0 /* AppDelegate.swift in Sources */,
+				7B76AF281F812FF5003C23C7 /* YSKitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +388,7 @@
 				7B74D0E31F7FC88100FBBAA0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

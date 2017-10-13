@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Demo
 //
-//  Created by niupark on 2017/9/30.
+//  Created by liukai on 2017/9/30.
 //  Copyright © 2017年 尧尚信息科技. All rights reserved.
 //
 

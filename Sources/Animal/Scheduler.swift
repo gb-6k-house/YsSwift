@@ -1,6 +1,10 @@
-// The MIT License (MIT)
-//
-// Copyright (c) 2017 Alexander Grebenyuk (github.com/kean).
+/******************************************************************************
+ ** auth: liukai
+ ** date: 2017/7
+ ** ver : 1.0
+ ** desc:  说明
+ ** Copyright © 2017年 尧尚信息科技(wwww.yourshares.cn). All rights reserved
+ ******************************************************************************/
 
 import Foundation
 
@@ -104,7 +108,7 @@ private final class Operation: Foundation.Operation {
     var _isFinished = false
 
     let starter: (_ finish: @escaping () -> Void) -> Void
-    let queue = DispatchQueue(label: "com.github.kean.Nuke.Operation")
+    let queue = DispatchQueue(label: "com.github.ys.animal.Operation")
 
     init(starter: @escaping (_ fulfill: @escaping () -> Void) -> Void) {
         self.starter = starter
@@ -145,7 +149,7 @@ private final class Operation: Foundation.Operation {
 public final class RateLimiter: AsyncScheduler {
     private let bucket: TokenBucket
     private let scheduler: AsyncScheduler // underlying scheduler
-    private let queue = DispatchQueue(label: "com.github.kean.Nuke.RateLimiter")
+    private let queue = DispatchQueue(label: "com.github.ys.animal.RateLimiter")
     private var pendingItems = [Item]()
     private var isExecutingPendingItems = false
 

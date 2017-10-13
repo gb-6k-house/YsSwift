@@ -14,13 +14,12 @@ public protocol DataLoading {
     func loadData(with request: Request, token: CancellationToken?, completion: @escaping (Result<(Data, URLResponse)>) -> Void)
 }
 
-public final class ImageLoader: DataLoading {
+public final class Loader: DataLoading {
     public let session: URLSession
     private let scheduler: AsyncScheduler
 
-    
-    public init(configuration: URLSessionConfiguration = ImageLoader.defaultConfiguration,
-                scheduler: AsyncScheduler = ImageLoader.defaultScheduler) {
+    public init(configuration: URLSessionConfiguration = Loader.defaultConfiguration,
+                scheduler: AsyncScheduler = Loader.defaultScheduler) {
         self.session = URLSession(configuration: configuration)
         self.scheduler = scheduler
     }
@@ -29,7 +28,7 @@ public final class ImageLoader: DataLoading {
     /// as a `urlCache`.
     public static var defaultConfiguration: URLSessionConfiguration {
         let conf = URLSessionConfiguration.default
-        conf.urlCache = ImageLoader.sharedUrlCache
+        conf.urlCache = Loader.sharedUrlCache
         return conf
     }
     
@@ -37,7 +36,7 @@ public final class ImageLoader: DataLoading {
     public static let sharedUrlCache = URLCache(
         memoryCapacity: 0,
         diskCapacity: 150 * 1024 * 1024, // 150 MB
-        diskPath: "com.github.YKit.Rabbit.Cache"
+        diskPath: "com.github.YKit.Animal.Cache"
     )
     
     public static var defaultScheduler: AsyncScheduler {

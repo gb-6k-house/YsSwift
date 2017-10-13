@@ -6,3 +6,18 @@
  ** Copyright © 2017年 尧尚信息科技(wwww.yourshares.cn). All rights reserved
  ******************************************************************************/
 
+import UIKit.UIImage
+
+#if !COCOAPODS
+    import YSKit
+#endif
+
+/// Alias for `UIImage`.
+public typealias Image = UIImage
+
+/// Represents an arbitrary target for image loading.
+public protocol Target: class {
+    /// Callback that gets called when the request gets completed.
+    func handle(response: Result<Image>, isFromMemoryCache: Bool)
+}
+

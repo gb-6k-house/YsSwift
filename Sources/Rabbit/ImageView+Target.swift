@@ -8,6 +8,11 @@
 
 import Foundation
 
+#if !COCOAPODS
+    import YSKit
+#endif
+
+
 #if os(macOS)
     import Cocoa
     /// Alias for `NSImageView`
