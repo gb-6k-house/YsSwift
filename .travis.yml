@@ -1,7 +1,7 @@
 language: objective-c
 os:
     - osx
-osx_image: xcode9.0
+osx_image: xcode9.1
 podfile: Demo/Podfile
 
 xcode_workspace: Demo/Demo.xcworkspace # path to your xcodeproj folder
