@@ -1,4 +1,4 @@
-[![platform-image]]()
+[![platform-image]](iOS-url)
 [![lic-image]](LICENSE)
 
 >---
@@ -49,7 +49,7 @@ end
 
 
 
-
+[iOS-url]: https://developer.apple.com/library/content/navigation/#section=Platforms&topic=iOS
 [lic-image]: https://img.shields.io/dub/l/vibe-d.svg
 [platform-image]: https://img.shields.io/badge/platform-iOS-orange.svg
 [building-image]: https://img.shields.io/travis/USER/REPO.svg
