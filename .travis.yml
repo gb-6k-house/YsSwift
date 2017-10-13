@@ -1,6 +1,5 @@
 language: objective-c
 os:
-    - linux
     - osx
 osx_image: xcode9.0
 podfile: Demo/Podfile

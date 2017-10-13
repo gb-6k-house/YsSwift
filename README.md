@@ -1,4 +1,4 @@
-[![platform-image]](iOS-url)
+[![platform-image]][iOS-url]
 [![lic-image]](LICENSE)
 
 >---
