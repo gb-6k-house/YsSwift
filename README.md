@@ -1,3 +1,4 @@
+[![travis-image]][travis-url]
 [![platform-image]][iOS-url]
 [![lic-image]](LICENSE)
 
@@ -50,6 +51,9 @@ end
 
 
 [iOS-url]: https://developer.apple.com/library/content/navigation/#section=Platforms&topic=iOS
+
+[travis-url]: https://travis-ci.org/gb-6k-house/YSKit
 [lic-image]: https://img.shields.io/dub/l/vibe-d.svg
 [platform-image]: https://img.shields.io/badge/platform-iOS-orange.svg
 [building-image]: https://img.shields.io/travis/USER/REPO.svg
+[travis-image]: https://travis-ci.org/gb-6k-house/YSKit.svg?branch=master
