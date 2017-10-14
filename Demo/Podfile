@@ -8,8 +8,8 @@ target 'Demo' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   # Pods for Demo
-#  pod 'YSKit', :path => "../"
-  pod 'YSKit/Rabbit', :path => "../"
+#  pod 'YsSwift', :path => "../"
+  pod 'YsSwift/Rabbit', :path => "../"
 
 end
 
