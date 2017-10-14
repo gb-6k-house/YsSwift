@@ -1,6 +1,6 @@
-## YSKit/Rabbit
+## YsSwift/Rabbit
 
-A solution for net image likes SDWebImage or Nuke. This SDK include all functions of YSKit
+A solution for net image likes SDWebImage or Nuke. This SDK include all functions of YsSwift
 
 ## Requirements
 
@@ -11,14 +11,14 @@ A solution for net image likes SDWebImage or Nuke. This SDK include all function
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
-**Search with `pod search YSKit` `**
+**Search with `pod search YsSwift` `**
 
-* Include **YSKit/Rabbit** functions
+* Include **YsSwift/Rabbit** functions
 ```ruby
 # Podfile
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'YSKit/Rabbit',    '~> 0.0.1'
+    pod 'YsSwift/Rabbit',    '~> 0.1.1'
 end
 ```

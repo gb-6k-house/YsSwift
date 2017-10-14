@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import YSKit
+import YsSwift
 
 class YSKitTest {
     func testString() {

@@ -26,27 +26,8 @@
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
-**Search with `pod search YsSwift` `**
-
-* Include **YsSwift** functions
-```ruby
-# Podfile
-use_frameworks!
-
-target 'YOUR_TARGET_NAME' do
-    pod 'YsSwift',    '~> 0.0.1'
-end
-```
-
-* Include **YsSwift/Rabbit** functions
-```ruby
-# Podfile
-use_frameworks!
-
-target 'YOUR_TARGET_NAME' do
-    pod 'YsSwift/Rabbit',    '~> 0.0.1'
-end
-```
+* [YsSwift](Documentation/Animal.md)
+* [YsSwift/Rabbit](Documentation/Rabbit.md)
 
 
 

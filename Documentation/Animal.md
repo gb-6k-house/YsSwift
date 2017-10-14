@@ -19,7 +19,7 @@ This SDK supply some common Swift base functions, like string catgory, data catg
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'YsSwift',    '~> 0.0.1'
+    pod 'YsSwift',    '~> 0.1.1'
 end
 ```
 

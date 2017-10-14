@@ -6,7 +6,7 @@ import Foundation
 import UIKit
 
 #if !COCOAPODS
-    import YSKit
+    import YsSwift
 #endif
 
 

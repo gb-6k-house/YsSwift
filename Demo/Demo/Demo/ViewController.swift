@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import YSKit
+import YsSwift
 
 class ViewController: UIViewController {
 

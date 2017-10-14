@@ -9,7 +9,7 @@
 import UIKit.UIImage
 
 #if !COCOAPODS
-    import YSKit
+    import YsSwift
 #endif
 
 /// Alias for `UIImage`.

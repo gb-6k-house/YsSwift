@@ -9,7 +9,7 @@
 import Foundation
 
 #if !COCOAPODS
-    import YSKit
+    import YsSwift
 #endif
 
 
