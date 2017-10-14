@@ -6,5 +6,7 @@ podfile: Demo/Podfile
 
 script:
   - set -o pipefail
-  - xcodebuild -workspace Demo/Demo.xcworkspace -scheme Demo | xcpretty -c
+  - xcodebuild -version
+  - xcodebuild -showsdks
+  - xcodebuild -workspace Demo/Demo.xcworkspace -scheme Demo -sdk iphonesimulator  -configuration Debug | xcpretty -c
   - swiftlint

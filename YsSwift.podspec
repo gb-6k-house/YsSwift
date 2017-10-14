@@ -28,6 +28,7 @@ Pod::Spec.new do |s|
   s.subspec "Animal" do |ss|
     ss.source_files  = "Sources/Animal/**/*"
     ss.framework  = "Foundation"
+    ss.framework  = "UIKit"
   end
 
   s.subspec "Rabbit" do |ss|
