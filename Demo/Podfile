@@ -10,7 +10,7 @@ target 'Demo' do
   # Pods for Demo
 #  pod 'YsSwift', :path => "../"
   pod 'YsSwift/Rabbit', :path => "../"
-
+#   pod 'YsSwift/Rabbit',    '~> 0.1.1'
 end
 
 #配置pod工程中swift版本
