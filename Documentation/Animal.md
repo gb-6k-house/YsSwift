@@ -1,4 +1,4 @@
-## YSKit
+## YsSwift
 
 This SDK supply some common Swift base functions, like string catgory, data catgory etc
 
@@ -11,15 +11,15 @@ This SDK supply some common Swift base functions, like string catgory, data catg
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
-**Search with `pod search YSKit` `**
+**Search with `pod search YsSwift` `**
 
-* Include **YSKit** functions
+* Include **YsSwift** functions
 ```ruby
 # Podfile
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'YSKit',    '~> 0.0.1'
+    pod 'YsSwift',    '~> 0.0.1'
 end
 ```
 
@@ -27,7 +27,7 @@ end
 ### String Functions or Methods
 
 ```swift
-import YSKit
+import YsSwift
 
 let s = "         hello world      "
 print("\(s.ys.trim())")   // hello world

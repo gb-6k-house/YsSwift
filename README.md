@@ -10,10 +10,10 @@
 >---
 ## Introduction
    Variable functions programming in Swift. For examples:
-- **[YSKit](Documentation/Animal.md)**
+- **[YsSwift](Documentation/Animal.md)**
 
     This SDK supply some common Swift base functions, like string catgory, data catgory etc. [How to use](Documentation/Animal.md)
-- **[YSKit/Rabbit](Documentation/Rabbit.md)**
+- **[YsSwift/Rabbit](Documentation/Rabbit.md)**
 
     A solution for net image likes SDWebImage or Nuke. This SDK include all functions of YSKit. [How to use](Documentation/Rabbit.md)
 
@@ -26,25 +26,25 @@
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
-**Search with `pod search YSKit` `**
+**Search with `pod search YsSwift` `**
 
-* Include **YSKit** functions
+* Include **YsSwift** functions
 ```ruby
 # Podfile
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'YSKit',    '~> 0.0.1'
+    pod 'YsSwift',    '~> 0.0.1'
 end
 ```
 
-* Include **YSKit/Rabbit** functions
+* Include **YsSwift/Rabbit** functions
 ```ruby
 # Podfile
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'YSKit/Rabbit',    '~> 0.0.1'
+    pod 'YsSwift/Rabbit',    '~> 0.0.1'
 end
 ```
 
@@ -52,8 +52,7 @@ end
 
 [iOS-url]: https://developer.apple.com/library/content/navigation/#section=Platforms&topic=iOS
 
-[travis-url]: https://travis-ci.org/gb-6k-house/YSKit
+[travis-url]: https://travis-ci.org/gb-6k-house/YsSwift
 [lic-image]: https://img.shields.io/dub/l/vibe-d.svg
 [platform-image]: https://img.shields.io/badge/platform-iOS-orange.svg
-[building-image]: https://img.shields.io/travis/USER/REPO.svg
-[travis-image]: https://travis-ci.org/gb-6k-house/YSKit.svg?branch=master
+[travis-image]: https://travis-ci.org/gb-6k-house/YsSwift.svg?branch=master
