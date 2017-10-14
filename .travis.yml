@@ -9,4 +9,3 @@ script:
   - xcodebuild -version
   - xcodebuild -showsdks
   - xcodebuild -workspace Demo/Demo.xcworkspace -scheme Demo -sdk iphonesimulator  -configuration Debug | xcpretty -c
-  - swiftlint
