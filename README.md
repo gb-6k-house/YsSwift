@@ -1,5 +1,5 @@
 [![travis-image]][travis-url]
-[![platform-image]][iOS-url]
+[![platform-image]][platform-image]
 [![lic-image]](LICENSE)
 
 >---
