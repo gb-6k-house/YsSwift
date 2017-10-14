@@ -20,6 +20,8 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://www.yourshares.cn"
 
   s.platform     = :ios, "9.0"
+  s.ios.deployment_target = '9.0'
+
   s.source       = { :git => "https://github.com/gb-6k-house/YSKit.git", :tag => s.version }
   s.default_subspec = "Animal"
 
