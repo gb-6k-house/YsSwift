@@ -10,4 +10,3 @@ script:
   - xcodebuild -showsdks
   - xcodebuild -workspace YsSwift/YsSwift.xcworkspace -scheme YsSwift -sdk iphonesimulator  -configuration Debug | xcpretty -c
   - xcodebuild -workspace YsSwift/YsSwift.xcworkspace -scheme Rabbit -sdk iphonesimulator  -configuration Debug | xcpretty -c
-  - swiftlint
