@@ -4,8 +4,8 @@ A solution for net image likes SDWebImage or Nuke. This SDK include all function
 
 ## Requirements
 
-* Xcode 8.0
-* Swift 3.0
+* Xcode 8.0 or later
+* Swift 3.0 or later
 
 ## Installation
 

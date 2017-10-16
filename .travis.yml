@@ -2,11 +2,12 @@ language: objective-c
 os:
     - osx
 osx_image: xcode9
-podfile: Demo/Podfile
+podfile: YsSwift/Podfile
 
 script:
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
-  - xcodebuild -workspace Demo/Demo.xcworkspace -scheme Demo -sdk iphonesimulator  -configuration Debug | xcpretty -c
+  - xcodebuild -workspace YsSwift/YsSwift.xcworkspace -scheme YsSwift -sdk iphonesimulator  -configuration Debug | xcpretty -c
+  - xcodebuild -workspace YsSwift/YsSwift.xcworkspace -scheme Rabbit -sdk iphonesimulator  -configuration Debug | xcpretty -c
   - swiftlint

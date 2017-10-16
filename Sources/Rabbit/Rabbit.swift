@@ -21,3 +21,10 @@ public protocol Target: class {
     func handle(response: Result<Image>, isFromMemoryCache: Bool)
 }
 
+
+/// Loads an image into the given target.
+///
+public func loadImage(with url: URL, into target: Target) {
+//    Manager.shared.loadImage(with: url, into: target)
+}
+
