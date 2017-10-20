@@ -1,6 +1,6 @@
 ## YsSwift
 
-YsSwift包括大量iOS开发中常用的一些功能。YsSwift主要目的是对现有的Cocoa框架做一些扩展，比如对UIImage扩展，提供了压缩图片等等大量的方法 。
+YsSwift包括大量iOS开发中常用的一些功能。YsSwift主要目的是对现有的Cocoa框架做一些扩展，比如对UIImage扩展，提供了压缩图片等等大量的方法。
 
 
 >---
@@ -29,13 +29,13 @@ YsSwift包括大量iOS开发中常用的一些功能。YsSwift主要目的是对
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'YsSwift',    '~> 0.1.1'
+    pod 'YsSwift',    '~> 0.2.1'
 end
 ```
 
 ## 使用说明
 
-下面是部分功能的说明。更多的功能使用请参照[Demo][Demo]
+下面是部分功能的说明。更多的功能使用请参照[Demo][Demo]
 
 ### String扩展
 
@@ -54,7 +54,7 @@ print("\(d.ys.double())") //0.0
 ### UIView的扩展
 ```swift
 let v = UIView()
-//屏幕截图
+//屏幕截图
 let image = v.ys.screenshot()
 ```
 ### UIImage的扩展

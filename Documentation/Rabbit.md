@@ -5,8 +5,8 @@ Ligtly and extensional library for downloading and caching images from the web, 
 >---
 - **[Requirements](#Requirements)**
 - **[Installation](#Installation)**
-- **[使用说明](#使用说明)**
-- **[特别鸣谢](#特别鸣谢)**
+- **[Usage](#Usage)**
+- **[Thanks](#Thanks)**
 >---
 
 ## Requirements

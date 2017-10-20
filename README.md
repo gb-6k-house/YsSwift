@@ -7,7 +7,7 @@
 
 ## Documentation in Chinese
 
-**[中文说明](Documentation/zh_CN/readme_CN.md)**
+**[中文说明](Documentation/zh_CN/Readme_CN.md)**
 
 
 
