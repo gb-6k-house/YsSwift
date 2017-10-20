@@ -37,7 +37,7 @@ end
 
 ### 基础使用
 
-Rabbit对UIImageView提供了加载网络图片的接口，使用如下
+Rabbit对UIImageView提供了加载网络图片的接口，使用如下
 
 ```swift
 //UIImageView加载网络图片
