@@ -32,10 +32,13 @@ end
 ```
 
 ## 使用说明
-下面是部分功能的说明。更多的功能使用请参照[Demo][Demo]
+
+下面是部分功能的说明。更多的功能使用请参照[Demo][Demo]
 
 ### 基础使用
+
 Rabbit对UIImageView提供了加载网络图片的接口，使用如下
+
 ```swift
 //UIImageView加载网络图片
  self.imageView.ys.loadImage(with: URL(string: "your webimage url")!)
@@ -66,7 +69,7 @@ Rabbit.loadImage(with: URL(string: "your webimage url")!, into: self.button)
 
 ## 特别鸣谢
 
-感谢[@kean](https://github.com/kean)大神的[Nuke](Nuke)项目
+感谢[@kean](https://github.com/kean)大神的[Nuke](Nuke)项目
 
 
 [Nuke]: https://github.com/kean/Nuke
