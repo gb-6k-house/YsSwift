@@ -1,10 +1,10 @@
-//
-//  UIButton+Target.swift
-//  YsSwift
-//
-//  Created by niupark on 2017/10/20.
-//  Copyright © 2017年 尧尚信息科技. All rights reserved.
-//
+/******************************************************************************
+ ** auth: liukai
+ ** date: 2017/7
+ ** ver : 1.0
+ ** desc:  UIButton提供网络图片加载能力
+ ** Copyright © 2017年 尧尚信息科技(www.yourshares.cn). All rights reserved
+ ******************************************************************************/
 
 #if !COCOAPODS
     import YsSwift

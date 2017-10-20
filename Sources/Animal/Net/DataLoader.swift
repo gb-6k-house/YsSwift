@@ -3,7 +3,7 @@
  ** date: 2017/7
  ** ver : 1.0
  ** desc:  资源加载器，加载网络资源
- ** Copyright © 2017年 尧尚信息科技(wwww.yourshares.cn). All rights reserved
+ ** Copyright © 2017年 尧尚信息科技(www.yourshares.cn). All rights reserved
  ******************************************************************************/
 
 import Foundation
