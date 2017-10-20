@@ -1,11 +1,19 @@
 ## YsSwift
 
-This SDK supply some common Swift base functions, like string catgory, data catgory etc
+This SDK supply some common Swift base functions, like string catgory, data catgory etc. 
+>---
+- **[Requirements](#Requirements)**
+- **[Installation](#Installation)**
+- **[Usage](#Usage)**
+    - ***String Functions or Methods***
+    - ***UIView category***
+    - ***UIImage category***
+>--- 
 
 ## Requirements
 
-* Xcode 8.0
-* Swift 3.0
+* Xcode 8.0+
+* Swift 3.0+
 
 ## Installation
 
@@ -24,6 +32,8 @@ end
 ```
 
 ## Usage
+
+More features, read [Demo](Demo)
 ### String Functions or Methods
 
 ```swift
@@ -51,4 +61,5 @@ image.ys.resizeImage(size: size)
 image.ys.compressImage(length: 1024)
 
 ```
+[Demo]: https://github.com/gb-6k-house/YsSwift/tree/master/Demo
 

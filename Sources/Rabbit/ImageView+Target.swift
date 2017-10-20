@@ -1,10 +1,10 @@
-//
-//  UIImageView+Target.swift
-//  Pods
-//
-//  Created by niupark on 2017/10/7.
-//
-//
+/******************************************************************************
+ ** auth: liukai
+ ** date: 2017/7
+ ** ver : 1.0
+ ** desc:  Rabbit + Image
+ ** Copyright © 2017年 尧尚信息科技(wwww.yourshares.cn). All rights reserved
+ ******************************************************************************/
 
 import Foundation
 
@@ -24,6 +24,7 @@ import Foundation
 #endif
 
 #if os(macOS) || os(iOS) || os(tvOS)
+    
     /// Default implementation of `Target` protocol for `ImageView`.
     extension ImageView: Target {
         /// Displays an image on success. Runs `opacity` transition if
@@ -43,3 +44,18 @@ import Foundation
     }
     
 #endif
+
+extension YSSwift where Base: ImageView {
+    
+
+    public func loadImage(with url: URL, placeholder placeholderImage: UIImage? = nil) {
+        //set placehold image
+        if let image = placeholderImage {
+            self.base.image = image
+        }
+        //load image
+        Rabbit.loadImage(with: url, into: self.base)
+    }
+    
+    
+}

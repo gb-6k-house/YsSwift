@@ -8,27 +8,30 @@
 
 import Foundation
 
-
 public protocol DataLoading {
     /// Loads data with the given request.
+    //数据加载协议
+    typealias DataHandler = (Result<(Data, URLResponse)>) -> Void
     func loadData(with request: Request, token: CancellationToken?, completion: @escaping (Result<(Data, URLResponse)>) -> Void)
+    //数据解析协议
+
 }
 
-public final class Loader: DataLoading {
+public final class DataLoader: DataLoading {
+    
     public let session: URLSession
     private let scheduler: AsyncScheduler
-
-    public init(configuration: URLSessionConfiguration = Loader.defaultConfiguration,
-                scheduler: AsyncScheduler = Loader.defaultScheduler) {
+    
+    public init(configuration: URLSessionConfiguration = DataLoader.defaultConfiguration,
+                scheduler: AsyncScheduler = DataLoader.defaultScheduler) {
         self.session = URLSession(configuration: configuration)
         self.scheduler = scheduler
     }
-
-    /// Returns a default configuration which has a `sharedUrlCache` set
-    /// as a `urlCache`.
+    
+    
     public static var defaultConfiguration: URLSessionConfiguration {
         let conf = URLSessionConfiguration.default
-        conf.urlCache = Loader.sharedUrlCache
+        conf.urlCache = DataLoader.sharedUrlCache
         return conf
     }
     
@@ -38,13 +41,14 @@ public final class Loader: DataLoading {
         diskCapacity: 150 * 1024 * 1024, // 150 MB
         diskPath: "com.github.YKit.Animal.Cache"
     )
-    
+
+    //缺省的调度线程，根据令牌桶算法进行了流量控制，缺省频率是45/s
     public static var defaultScheduler: AsyncScheduler {
         return RateLimiter(scheduler: OperationQueueScheduler(maxConcurrentOperationCount: 6))
     }
     
     /// Loads data with the given request.
-    public func loadData(with request: Request, token: CancellationToken?, completion: @escaping (Result<(Data, URLResponse)>) -> Void) {
+    public func loadData(with request: Request, token: CancellationToken?, completion: @escaping  (Result<(Data, URLResponse)>) -> Void) {
         scheduler.execute(token: token) { finish in
             let task = self.session.dataTask(with: request.urlRequest) { data, response, error in
                 if let data = data, let response = response, error == nil {
@@ -62,3 +66,4 @@ public final class Loader: DataLoading {
         }
     }
 }
+

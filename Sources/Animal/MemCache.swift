@@ -16,11 +16,12 @@ public protocol Caching {
 public protocol CachedItem {
     var value: AnyObject {get set}
     var memCost: Int { get }
-    var key: AnyHashable { get set }
 }
 
 public final class Cache<T: CachedItem>: Caching {
-    public typealias ItemType = T
+//    public typealias ItemType = T
+    
+    
     private var map = [AnyHashable: Node<T>]()
     private let list = LinkedList<T>()
     private let lock = Lock()
@@ -82,7 +83,7 @@ public final class Cache<T: CachedItem>: Caching {
             defer { lock.unlock() }
             
             if let v = newValue {
-                add(node: Node(value: v))
+                add(node: Node(value: v, key: key))
                 trim()
             } else {
                 guard let node = map[key] else { return }
@@ -92,17 +93,17 @@ public final class Cache<T: CachedItem>: Caching {
     }
     
     private func add(node: Node<T>) {
-        if let existingNode = map[node.value.key] {
+        if let existingNode = map[node.key] {
             remove(node: existingNode)
         }
         list.append(node)
-        map[node.value.key] = node
+        map[node.key] = node
         totalCost += node.value.memCost
     }
     
     private func remove(node: Node<T>) {
         list.remove(node)
-        map[node.value.key] = nil
+        map[node.key] = nil
         totalCost -= node.value.memCost
     }
     
@@ -156,6 +157,17 @@ public final class Cache<T: CachedItem>: Caching {
             remove(node: node)
         }
     }
+    
+    
+    private final class Context {
+        var value: Node<T>
+        var key: AnyHashable
+        init(value: Node<T>, key:AnyHashable) {
+            self.value = value
+            self.key = key
+            
+        }
+    }
 
 }
 
@@ -205,6 +217,11 @@ private final class Node<V> {
     let value: V
     var next: Node<V>?
     weak var previous: Node<V>?
-    
-    init(value: V) { self.value = value }
+    var key: AnyHashable
+
+    init(value: V, key: AnyHashable) {
+        self.value = value
+        self.key = key
+        
+    }
 }

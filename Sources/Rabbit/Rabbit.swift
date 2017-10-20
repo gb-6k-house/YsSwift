@@ -12,7 +12,9 @@ import UIKit.UIImage
     import YsSwift
 #endif
 
-/// Alias for `UIImage`.
+
+import UIKit.UIImage
+    /// Alias for `UIImage`.
 public typealias Image = UIImage
 
 /// Represents an arbitrary target for image loading.
@@ -21,10 +23,14 @@ public protocol Target: class {
     func handle(response: Result<Image>, isFromMemoryCache: Bool)
 }
 
+open class Rabbit {
+    /// Loads an image into the given target.
+    ///
+    open static func loadImage(with url: URL, into target: Target) {
+        Manager.shared.loadImage(with: url, into: target)
+    }
 
-/// Loads an image into the given target.
-///
-public func loadImage(with url: URL, into target: Target) {
-//    Manager.shared.loadImage(with: url, into: target)
 }
+
+
 

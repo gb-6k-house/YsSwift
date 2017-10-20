@@ -9,9 +9,7 @@
 import Foundation
 
 public struct Request {
-    
-    fileprivate var container: Container
-
+    public private(set) var container: Container
     public var urlRequest: URLRequest {
         get { return container.resource.urlRequest }
         set {
@@ -21,7 +19,6 @@ public struct Request {
             }
         }
     }
-    
     public init(url: URL) {
         container = Container(resource: Resource.url(url))
         container.urlString = url.absoluteString
@@ -40,9 +37,9 @@ public struct Request {
         closure(container)
     }
 
-    fileprivate class Container {
-        var resource: Resource
-        var urlString: String? // memoized absoluteString
+    public class Container {
+        public fileprivate(set) var resource: Resource
+        public fileprivate(set) var urlString: String? // memoized absoluteString
         
         init(resource: Resource) {
             self.resource = resource
@@ -54,8 +51,7 @@ public struct Request {
             return ref
         }
     }
-    
-    fileprivate enum Resource {
+    public enum Resource {
         case url(URL)
         case request(URLRequest)
         
@@ -68,3 +64,33 @@ public struct Request {
     }
 
 }
+
+
+public extension Request {
+    /// Compares two requests for equivalence using an `equator` closure.
+    public class Key: Hashable {
+        let request: Request
+        let equator: (Request, Request) -> Bool
+        
+       public init(request: Request, equator: @escaping (Request, Request) -> Bool) {
+            self.request = request
+            self.equator = equator
+        }
+        
+        /// Returns hash from the request's URL.
+        public var hashValue: Int {
+            return request.container.urlString?.hashValue ?? 0
+        }
+        
+        /// Compares two keys for equivalence.
+        public static func ==(lhs: Key, rhs: Key) -> Bool {
+            return lhs.equator(lhs.request, rhs.request)
+        }
+    }
+}
+
+
+
+
+
+

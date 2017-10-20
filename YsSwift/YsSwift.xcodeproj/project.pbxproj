@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2681824D4425EFA3D211E14F /* Pods_YsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A755192FA4CC6096364C9F9E /* Pods_YsSwift.framework */; };
+		7B16915E1F9A2C4B007010C0 /* UIButton+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16915C1F9A2C35007010C0 /* UIButton+Target.swift */; };
 		7BBE87A31F949A4D006A02BA /* YsSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BBE87A11F949A4D006A02BA /* YsSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BBE87D41F949B42006A02BA /* Rabbit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BBE87D21F949B42006A02BA /* Rabbit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BBE87D81F949B59006A02BA /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87AB1F949B2A006A02BA /* Animal.swift */; };
@@ -26,10 +27,15 @@
 		7BBE87E51F949B64006A02BA /* ImageView+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87BA1F949B2A006A02BA /* ImageView+Target.swift */; };
 		7BBE87E61F949B64006A02BA /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87BB1F949B2A006A02BA /* Rabbit.swift */; };
 		7BBE87E71F949BAE006A02BA /* YsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBE879E1F949A4D006A02BA /* YsSwift.framework */; };
+		7BBE87E91F94A153006A02BA /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87E81F94A153006A02BA /* Manager.swift */; };
+		7BBE87EB1F94A1AA006A02BA /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87EA1F94A1AA006A02BA /* DataDecoder.swift */; };
+		7BBE87ED1F94A550006A02BA /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87EC1F94A550006A02BA /* Loader.swift */; };
+		7BBE87F01F94B07C006A02BA /* LoaderDeduplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87EE1F94B05F006A02BA /* LoaderDeduplicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		50C455881188948ABBE90C7E /* Pods-YsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-YsSwift/Pods-YsSwift.release.xcconfig"; sourceTree = "<group>"; };
+		7B16915C1F9A2C35007010C0 /* UIButton+Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Target.swift"; sourceTree = "<group>"; };
 		7BBE879E1F949A4D006A02BA /* YsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBE87A11F949A4D006A02BA /* YsSwift.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YsSwift.h; sourceTree = "<group>"; };
 		7BBE87A21F949A4D006A02BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +57,10 @@
 		7BBE87D01F949B42006A02BA /* Rabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBE87D21F949B42006A02BA /* Rabbit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rabbit.h; sourceTree = "<group>"; };
 		7BBE87D31F949B42006A02BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BBE87E81F94A153006A02BA /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		7BBE87EA1F94A1AA006A02BA /* DataDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataDecoder.swift; sourceTree = "<group>"; };
+		7BBE87EC1F94A550006A02BA /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		7BBE87EE1F94B05F006A02BA /* LoaderDeduplicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderDeduplicator.swift; sourceTree = "<group>"; };
 		A755192FA4CC6096364C9F9E /* Pods_YsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6130257964C7486ACAB0E2 /* Pods-YsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YsSwift/Pods-YsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,12 +133,12 @@
 				7BBE87AD1F949B2A006A02BA /* Data+YS.swift */,
 				7BBE87AE1F949B2A006A02BA /* Lock.swift */,
 				7BBE87AF1F949B2A006A02BA /* MemCache.swift */,
-				7BBE87B01F949B2A006A02BA /* Net */,
 				7BBE87B31F949B2A006A02BA /* Scheduler.swift */,
 				7BBE87B41F949B2A006A02BA /* String+YS.swift */,
 				7BBE87B51F949B2A006A02BA /* UIImage+YS.swift */,
 				7BBE87B61F949B2A006A02BA /* UIView+YS.swift */,
 				7BBE87B71F949B2A006A02BA /* YSSwift.swift */,
+				7BBE87B01F949B2A006A02BA /* Net */,
 			);
 			path = Animal;
 			sourceTree = "<group>";
@@ -138,6 +148,7 @@
 			children = (
 				7BBE87B11F949B2A006A02BA /* DataLoader.swift */,
 				7BBE87B21F949B2A006A02BA /* Request.swift */,
+				7BBE87EE1F94B05F006A02BA /* LoaderDeduplicator.swift */,
 			);
 			path = Net;
 			sourceTree = "<group>";
@@ -146,8 +157,12 @@
 			isa = PBXGroup;
 			children = (
 				7BBE87B91F949B2A006A02BA /* Cache.swift */,
-				7BBE87BA1F949B2A006A02BA /* ImageView+Target.swift */,
 				7BBE87BB1F949B2A006A02BA /* Rabbit.swift */,
+				7BBE87E81F94A153006A02BA /* Manager.swift */,
+				7BBE87EA1F94A1AA006A02BA /* DataDecoder.swift */,
+				7BBE87EC1F94A550006A02BA /* Loader.swift */,
+				7BBE87BA1F949B2A006A02BA /* ImageView+Target.swift */,
+				7B16915C1F9A2C35007010C0 /* UIButton+Target.swift */,
 			);
 			path = Rabbit;
 			sourceTree = "<group>";
@@ -333,6 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBE87F01F94B07C006A02BA /* LoaderDeduplicator.swift in Sources */,
 				7BBE87D81F949B59006A02BA /* Animal.swift in Sources */,
 				7BBE87D91F949B59006A02BA /* CancellationToken.swift in Sources */,
 				7BBE87DA1F949B59006A02BA /* Data+YS.swift in Sources */,
@@ -352,9 +368,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B16915E1F9A2C4B007010C0 /* UIButton+Target.swift in Sources */,
 				7BBE87E41F949B64006A02BA /* Cache.swift in Sources */,
 				7BBE87E51F949B64006A02BA /* ImageView+Target.swift in Sources */,
+				7BBE87ED1F94A550006A02BA /* Loader.swift in Sources */,
+				7BBE87EB1F94A1AA006A02BA /* DataDecoder.swift in Sources */,
 				7BBE87E61F949B64006A02BA /* Rabbit.swift in Sources */,
+				7BBE87E91F94A153006A02BA /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

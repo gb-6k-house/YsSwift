@@ -7,7 +7,7 @@
  ******************************************************************************/
 
 //定义ys 命名空间
-public struct YSSwift<Base> {
+public class YSSwift<Base> {
     public let base: Base
     public init(_ base: Base) {
         self.base = base

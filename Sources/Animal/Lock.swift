@@ -1,14 +1,14 @@
-//
-//  Lock.swift
-//  Pods
-//
-//  Created by niupark on 2017/10/2.
-//
-//
+/******************************************************************************
+ ** auth: liukai
+ ** date: 2017/7
+ ** ver : 1.0
+ ** desc: 互斥锁
+ ** Copyright © 2017年 尧尚信息科技(wwww.yourshares.cn). All rights reserved
+ ******************************************************************************/
 
 import Foundation
 
-internal final class Lock {
+public final class Lock {
     var mutex = UnsafeMutablePointer<pthread_mutex_t>.allocate(capacity: 1)
     
     init() { pthread_mutex_init(mutex, nil) }

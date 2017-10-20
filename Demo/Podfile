@@ -10,7 +10,10 @@ target 'Demo' do
   # Pods for Demo
 #  pod 'YsSwift', :path => "../"
   pod 'YsSwift/Rabbit', :path => "../"
-#   pod 'YsSwift/Rabbit',    '~> 0.1.1'
+  pod 'Nuke'
+  pod 'SDWebImage'
+
+#   pod 'YsSwift/Rabbit',    '~> 0.1.1'/Users/niupark/Documents/work/github/YsSwift/Demo/Podfile
 end
 
 #配置pod工程中swift版本

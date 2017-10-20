@@ -22,16 +22,11 @@ public final class CancellationTokenSource {
     }
 
     /// Initializes the `CancellationTokenSource` instance.
-    public init() {
-        self.lock = Lock()
-    }
-
-    /// Allows to create cts with a shared lock to avoid excessive allocations.
-    /// This is tricky to use thus `internal` access modifier.
-    internal init(lock: Lock) {
+    public init(lock: Lock) {
         self.lock = lock
     }
-    internal static let lock = Lock()
+    
+    public static let lock = Lock()
 
     fileprivate func register(_ closure: @escaping () -> Void) {
         if isCancelling { closure(); return } // fast pre-lock check
