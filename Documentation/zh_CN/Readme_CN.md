@@ -28,7 +28,7 @@
 
 - **[YsSwift/Rabbit](Rabbit_CN.md)**
 
-    轻量级，易扩展的网络图片加载框架，支持内存缓存和硬盘缓存功能.具体使用和说明参照[文档](Documentation/zh_CN/Animal_CN.md)
+    轻量级，易扩展的网络图片加载框架，支持内存缓存和硬盘缓存功能.具体使用和说明参照[文档](Rabbit_CN.md)
 
 
 ## 安装

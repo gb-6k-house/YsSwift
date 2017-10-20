@@ -1,6 +1,6 @@
 ## YsSwift/Rabbit
 
-Rabbit是纯Swift编写的轻量级，易扩展的网络图片加载框架，支持内存缓存和硬盘缓存等功能。Rabbit参照了业界一些优秀的网络图片加载库,尤其是[Nuke](Nuke). Rabbit参照和使用了大量Nuke的源代码，并在Nuke做了大量的改进和优化。
+Rabbit是纯Swift编写的轻量级，易扩展的网络图片加载框架，支持内存缓存和硬盘缓存等功能。Rabbit参照了业界一些优秀的网络图片加载库,尤其是[Nuke](Nuke). Rabbit参照和使用了大量Nuke的源代码，并在Nuke做了大量的改进和优化。
 
 
 >---
@@ -19,9 +19,9 @@ Rabbit是纯Swift编写的轻量级，易扩展的网络图片加载框架，支
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
-**Search with `pod search YsSwift` **
+**Search with `pod search YsSwift`**
 
-* Include **YsSwift/Rabbit** functions
+Include **YsSwift/Rabbit** functions
 ```ruby
 # Podfile
 use_frameworks!
@@ -35,7 +35,7 @@ end
 下面是部分功能的说明。更多的功能使用请参照[Demo][Demo]
 
 ### 基础使用
-Rabbit对UIImageView提供了加载网络图片的接口，使用如下
+Rabbit对UIImageView提供了加载网络图片的接口，使用如下
 ```swift
 //UIImageView加载网络图片
  self.imageView.ys.loadImage(with: URL(string: "your webimage url")!)
@@ -46,8 +46,8 @@ Rabbit对UIImageView提供了加载网络图片的接口，使用如下
 self.imageView.ys.loadImage(with: URL(string: "your webimage url")!, placeholder: UIImage(named:"rabbit_1"))
 ```
 ### 高级使用
-Rabbit库易扩展，你可以给任意对象实现网络图片加载的功能，只需要实现Target协议
-比如给UIButton提供加载网络图片的功能，首先扩展UIButton实现Target协议
+Rabbit库易扩展，你可以给任意对象实现网络图片加载的功能，只需要实现Target协议
+比如给UIButton提供加载网络图片的功能，首先扩展UIButton实现Target协议
 ```swift
 extension UIButton : YsSwift.Target {
     

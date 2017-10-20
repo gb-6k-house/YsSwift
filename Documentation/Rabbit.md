@@ -20,7 +20,7 @@ Ligtly and extensional library for downloading and caching images from the web, 
 
 **Search with `pod search YsSwift` `**
 
-* Include **YsSwift/Rabbit** functions
+Include **YsSwift/Rabbit** functions
 ```ruby
 # Podfile
 use_frameworks!
