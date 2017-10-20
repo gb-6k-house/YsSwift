@@ -1,6 +1,6 @@
 ## YsSwift
 
-This SDK supply some common Swift base functions, like string catgory, data catgory etc. 
+This library supply some normal Swift base functions, likes String catgory, Data catgory etc.
 >---
 - **[Requirements](#Requirements)**
 - **[Installation](#Installation)**
@@ -12,8 +12,8 @@ This SDK supply some common Swift base functions, like string catgory, data catg
 
 ## Requirements
 
-* Xcode 8.0+
-* Swift 3.0+
+* Xcode8.0+
+* Swift3.0+
 
 ## Installation
 
@@ -21,13 +21,13 @@ This SDK supply some common Swift base functions, like string catgory, data catg
 
 **Search with `pod search YsSwift` `**
 
-* Include **YsSwift** functions
+Include **YsSwift** functions
 ```ruby
 # Podfile
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'YsSwift',    '~> 0.1.1'
+    pod 'YsSwift',    '~> 0.2.0'
 end
 ```
 

@@ -7,15 +7,15 @@ YsSwift包括大量iOS开发中常用的一些功能。YsSwift主要目的是对
 - **[版本要求](#版本要求)**
 - **[安装说明](#安装说明)**
 - **[使用说明](#使用说明)**
-    - ***[String扩展](#String扩展)***
-    - ***[UIView的扩展](#UIView的扩展)***
-    - ***[UIImage的扩展](#UIImage的扩展)***
+    - ***String扩展***
+    - ***UIView的扩展***
+    - ***UIImage的扩展***
 >--- 
 
 ## 版本要求
 
-* Xcode 8.0 或 之后的版本
-* Swift 3.2 或 之后的版本
+* Xcode8.0 或 之后的版本
+* Swift3.2 或 之后的版本
 
 ## 安装说明
 
@@ -23,7 +23,7 @@ YsSwift包括大量iOS开发中常用的一些功能。YsSwift主要目的是对
 
 **Search with `pod search YsSwift` `**
 
-* Include **YsSwift** functions
+Include **YsSwift** functions
 ```ruby
 # Podfile
 use_frameworks!

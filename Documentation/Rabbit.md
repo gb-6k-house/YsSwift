@@ -11,8 +11,8 @@ Ligtly and extensional library for downloading and caching images from the web, 
 
 ## Requirements
 
-* Xcode 8.0+
-* Swift 3.0+
+* Xcode8.0+
+* Swift3.0+
 
 ## Installation
 
