@@ -18,7 +18,7 @@
   
 >---
 ## Introduction
-   YsSwift is a pure-Swift library with some sub-modules. Variable functions in this library. for example. If you want there is a  UIImage category with a function to resize image size.  You can  read this doc ,  If you want get more information.
+   YsSwift is a pure-Swift library with some sub-modules. Variable functions in this library. for example. There is a  UIImage category with a function to resize image size.  You can  read this doc ,  If you want get more information.
 ### I come here because I want ...
 - Use swift to developing
 - Variable function for  String
