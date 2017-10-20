@@ -12,8 +12,8 @@ Rabbit是纯Swift编写的轻量级，易扩展的网络图片加载框架，支
 
 ## 版本要求
 
-* Xcode 8.0 或 之后的版本
-* Swift 3.2 或 之后的版本
+* Xcode8.0 或 之后的版本
+* Swift3.2 或 之后的版本
 
 ## 安装说明
 
@@ -69,7 +69,7 @@ Rabbit.loadImage(with: URL(string: "your webimage url")!, into: self.button)
 
 ## 特别鸣谢
 
-感谢[@kean](https://github.com/kean)大神的[Nuke](Nuke)项目
+感谢[@kean](https://github.com/kean)大神的[Nuke][Nuke]项目
 
 
 [Nuke]: https://github.com/kean/Nuke
