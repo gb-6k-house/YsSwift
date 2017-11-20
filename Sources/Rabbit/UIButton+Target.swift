@@ -6,7 +6,10 @@
  ** Copyright © 2017年 尧尚信息科技(www.yourshares.cn). All rights reserved
  ******************************************************************************/
 
-import YsSwift
+#if YSSWIFT_DEBUG
+    import YsSwift
+#endif
+
 import Result
 
 import UIKit

@@ -10,7 +10,10 @@ import Moya
 import RxSwift
 import ObjectMapper
 import SwiftyJSON
-import YsSwift
+#if YSSWIFT_DEBUG
+    import YsSwift
+#endif
+
 
 extension RxMoyaProvider {
 

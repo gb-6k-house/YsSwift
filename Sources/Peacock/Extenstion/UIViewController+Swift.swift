@@ -9,7 +9,10 @@
 
 import Foundation
 import UIKit
-import YsSwift
+#if YSSWIFT_DEBUG
+    import YsSwift
+#endif
+
 
 
 public extension YSSwift where Base: UIViewController {

@@ -6,6 +6,7 @@
  ** Copyright © 2017年 尧尚信息科技(www.yourshares.cn). All rights reserved
  ******************************************************************************/
 
+
 //定义ys 命名空间
 public class YSSwift<Base> {
     public let base: Base

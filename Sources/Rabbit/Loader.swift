@@ -7,7 +7,9 @@
 //
 
 import Foundation
-import YsSwift
+#if YSSWIFT_DEBUG
+    import YsSwift
+#endif
 import Result
 
 

@@ -7,7 +7,10 @@
  ******************************************************************************/
 
 import libPhoneNumber_iOS
-import YsSwift
+#if YSSWIFT_DEBUG
+    import YsSwift
+#endif
+
 
 
 extension YSStringCompatible {

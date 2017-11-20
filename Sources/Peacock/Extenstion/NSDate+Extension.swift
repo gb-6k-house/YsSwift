@@ -5,7 +5,10 @@
  ** desc:  说明
  ** Copyright © 2017年 尧尚信息科技(wwww.yourshares.cn). All rights reserved
  ******************************************************************************/
-import YsSwift
+#if YSSWIFT_DEBUG
+    import YsSwift
+#endif
+
 
 import UIKit
 public extension YSSwift where Base: NSDate {

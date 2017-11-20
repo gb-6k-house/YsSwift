@@ -8,7 +8,10 @@
 
 import Foundation
 import RxSwift
-import YsSwift
+#if YSSWIFT_DEBUG
+    import YsSwift
+#endif
+
 
 
 public let YSLanguageNotifcation = Notification.Name(rawValue: "YSSwift.Language")

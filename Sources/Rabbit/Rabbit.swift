@@ -9,7 +9,10 @@
 import UIKit.UIImage
 import Result
 
-import YsSwift
+#if YSSWIFT_DEBUG
+    import YsSwift
+#endif
+
 
 
 import UIKit.UIImage

@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C9D3213FEAA76EE101E95A3 /* Pods_Rabbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E678278AE0AC7D312017386C /* Pods_Rabbit.framework */; };
-		7B16915E1F9A2C4B007010C0 /* UIButton+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16915C1F9A2C35007010C0 /* UIButton+Target.swift */; };
+		04882D4C97B4889B015241F1 /* Pods_Rabbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E678278AE0AC7D312017386C /* Pods_Rabbit.framework */; };
 		7BBE87A31F949A4D006A02BA /* YsSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BBE87A11F949A4D006A02BA /* YsSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BBE87D41F949B42006A02BA /* Rabbit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BBE87D21F949B42006A02BA /* Rabbit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BBE87D81F949B59006A02BA /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87AB1F949B2A006A02BA /* Animal.swift */; };
 		7BBE87D91F949B59006A02BA /* CancellationToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87AC1F949B2A006A02BA /* CancellationToken.swift */; };
 		7BBE87DA1F949B59006A02BA /* Data+YS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87AD1F949B2A006A02BA /* Data+YS.swift */; };
@@ -23,12 +21,6 @@
 		7BBE87E11F949B59006A02BA /* UIImage+YS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87B51F949B2A006A02BA /* UIImage+YS.swift */; };
 		7BBE87E21F949B59006A02BA /* UIView+YS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87B61F949B2A006A02BA /* UIView+YS.swift */; };
 		7BBE87E31F949B59006A02BA /* YSSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87B71F949B2A006A02BA /* YSSwift.swift */; };
-		7BBE87E41F949B64006A02BA /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87B91F949B2A006A02BA /* Cache.swift */; };
-		7BBE87E51F949B64006A02BA /* ImageView+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87BA1F949B2A006A02BA /* ImageView+Target.swift */; };
-		7BBE87E61F949B64006A02BA /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87BB1F949B2A006A02BA /* Rabbit.swift */; };
-		7BBE87E91F94A153006A02BA /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87E81F94A153006A02BA /* Manager.swift */; };
-		7BBE87EB1F94A1AA006A02BA /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87EA1F94A1AA006A02BA /* DataDecoder.swift */; };
-		7BBE87ED1F94A550006A02BA /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87EC1F94A550006A02BA /* Loader.swift */; };
 		7BBE87F01F94B07C006A02BA /* LoaderDeduplicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87EE1F94B05F006A02BA /* LoaderDeduplicator.swift */; };
 		7BC83E2C1FC27347005F6784 /* Peacock.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BC83E2A1FC27347005F6784 /* Peacock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BC83ED71FC27B51005F6784 /* YSBaseHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC83E9D1FC27B50005F6784 /* YSBaseHeaderFooterView.swift */; };
@@ -77,6 +69,14 @@
 		7BC83F041FC27B51005F6784 /* YSUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC83ED51FC27B50005F6784 /* YSUtils.swift */; };
 		7BC83F051FC27B51005F6784 /* YSAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC83ED61FC27B50005F6784 /* YSAppManager.swift */; };
 		7BC83F211FC28B37005F6784 /* YSSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC83F201FC28B37005F6784 /* YSSwiftError.swift */; };
+		7BC83F4D1FC2B536005F6784 /* Rabbit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BC83F4B1FC2B536005F6784 /* Rabbit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7BC83F511FC2B547005F6784 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87B91F949B2A006A02BA /* Cache.swift */; };
+		7BC83F521FC2B547005F6784 /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87BB1F949B2A006A02BA /* Rabbit.swift */; };
+		7BC83F531FC2B547005F6784 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87E81F94A153006A02BA /* Manager.swift */; };
+		7BC83F541FC2B547005F6784 /* DataDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87EA1F94A1AA006A02BA /* DataDecoder.swift */; };
+		7BC83F551FC2B547005F6784 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87EC1F94A550006A02BA /* Loader.swift */; };
+		7BC83F561FC2B547005F6784 /* ImageView+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87BA1F949B2A006A02BA /* ImageView+Target.swift */; };
+		7BC83F571FC2B547005F6784 /* UIButton+Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B16915C1F9A2C35007010C0 /* UIButton+Target.swift */; };
 		C7F5BEDBCC2EE1D35BE1C679 /* Pods_Peacock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124FCFB694358494D598957E /* Pods_Peacock.framework */; };
 		D1ABE60C0F6AE72D662E79F6 /* Pods_YsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A755192FA4CC6096364C9F9E /* Pods_YsSwift.framework */; };
 /* End PBXBuildFile section */
@@ -106,7 +106,6 @@
 		7BBE87B91F949B2A006A02BA /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		7BBE87BA1F949B2A006A02BA /* ImageView+Target.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ImageView+Target.swift"; sourceTree = "<group>"; };
 		7BBE87BB1F949B2A006A02BA /* Rabbit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rabbit.swift; sourceTree = "<group>"; };
-		7BBE87D01F949B42006A02BA /* Rabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBE87D21F949B42006A02BA /* Rabbit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rabbit.h; sourceTree = "<group>"; };
 		7BBE87D31F949B42006A02BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BBE87E81F94A153006A02BA /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
@@ -161,8 +160,14 @@
 		7BC83ED41FC27B50005F6784 /* YSUIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSUIManager.swift; sourceTree = "<group>"; };
 		7BC83ED51FC27B50005F6784 /* YSUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSUtils.swift; sourceTree = "<group>"; };
 		7BC83ED61FC27B50005F6784 /* YSAppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSAppManager.swift; sourceTree = "<group>"; };
-		7BC83F1D1FC2886B005F6784 /* Animal copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Animal copy-Info.plist"; path = "/Users/niupark/Documents/work/github/YsSwift/YsSwift/Animal copy-Info.plist"; sourceTree = "<absolute>"; };
 		7BC83F201FC28B37005F6784 /* YSSwiftError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSwiftError.swift; sourceTree = "<group>"; };
+		7BC83F2A1FC2B36B005F6784 /* Rabbit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rabbit.h; sourceTree = "<group>"; };
+		7BC83F2B1FC2B36B005F6784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BC83F3E1FC2B526005F6784 /* rABBIT.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = rABBIT.h; sourceTree = "<group>"; };
+		7BC83F3F1FC2B526005F6784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BC83F491FC2B536005F6784 /* Rabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BC83F4B1FC2B536005F6784 /* Rabbit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rabbit.h; sourceTree = "<group>"; };
+		7BC83F4C1FC2B536005F6784 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7DFB10B9703414DF169BDADC /* Pods-Rabbit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rabbit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rabbit/Pods-Rabbit.release.xcconfig"; sourceTree = "<group>"; };
 		A755192FA4CC6096364C9F9E /* Pods_YsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC099B6082A0986FC3AC60BF /* Pods-YsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-YsSwift/Pods-YsSwift.release.xcconfig"; sourceTree = "<group>"; };
@@ -178,19 +183,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BBE87CC1F949B42006A02BA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C9D3213FEAA76EE101E95A3 /* Pods_Rabbit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7BC83E241FC27347005F6784 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C7F5BEDBCC2EE1D35BE1C679 /* Pods_Peacock.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC83F451FC2B536005F6784 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04882D4C97B4889B015241F1 /* Pods_Rabbit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,10 +209,12 @@
 				7BBE87A01F949A4D006A02BA /* YsSwift */,
 				7BBE87D11F949B42006A02BA /* Rabbit */,
 				7BC83E291FC27347005F6784 /* Peacock */,
+				7BC83F291FC2B36B005F6784 /* Rabbit */,
+				7BC83F3D1FC2B526005F6784 /* rABBIT */,
+				7BC83F4A1FC2B536005F6784 /* Rabbit */,
 				7BBE879F1F949A4D006A02BA /* Products */,
 				C459FBE5FB69A9A5A288C65B /* Pods */,
 				A4BCAE5D4320E43B7337BF4E /* Frameworks */,
-				7BC83F1D1FC2886B005F6784 /* Animal copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,8 +222,8 @@
 			isa = PBXGroup;
 			children = (
 				7BBE879E1F949A4D006A02BA /* YsSwift.framework */,
-				7BBE87D01F949B42006A02BA /* Rabbit.framework */,
 				7BC83E281FC27347005F6784 /* Peacock.framework */,
+				7BC83F491FC2B536005F6784 /* Rabbit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -442,6 +449,33 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		7BC83F291FC2B36B005F6784 /* Rabbit */ = {
+			isa = PBXGroup;
+			children = (
+				7BC83F2A1FC2B36B005F6784 /* Rabbit.h */,
+				7BC83F2B1FC2B36B005F6784 /* Info.plist */,
+			);
+			path = Rabbit;
+			sourceTree = "<group>";
+		};
+		7BC83F3D1FC2B526005F6784 /* rABBIT */ = {
+			isa = PBXGroup;
+			children = (
+				7BC83F3E1FC2B526005F6784 /* rABBIT.h */,
+				7BC83F3F1FC2B526005F6784 /* Info.plist */,
+			);
+			path = rABBIT;
+			sourceTree = "<group>";
+		};
+		7BC83F4A1FC2B536005F6784 /* Rabbit */ = {
+			isa = PBXGroup;
+			children = (
+				7BC83F4B1FC2B536005F6784 /* Rabbit.h */,
+				7BC83F4C1FC2B536005F6784 /* Info.plist */,
+			);
+			path = Rabbit;
+			sourceTree = "<group>";
+		};
 		A4BCAE5D4320E43B7337BF4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -476,19 +510,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BBE87CD1F949B42006A02BA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BBE87D41F949B42006A02BA /* Rabbit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7BC83E251FC27347005F6784 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				7BC83E2C1FC27347005F6784 /* Peacock.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC83F461FC2B536005F6784 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC83F4D1FC2B536005F6784 /* Rabbit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,26 +549,6 @@
 			productReference = 7BBE879E1F949A4D006A02BA /* YsSwift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		7BBE87CF1F949B42006A02BA /* Rabbit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BBE87D51F949B42006A02BA /* Build configuration list for PBXNativeTarget "Rabbit" */;
-			buildPhases = (
-				4F8FE95C147CDE77A4621585 /* [CP] Check Pods Manifest.lock */,
-				7BBE87CB1F949B42006A02BA /* Sources */,
-				7BBE87CC1F949B42006A02BA /* Frameworks */,
-				7BBE87CD1F949B42006A02BA /* Headers */,
-				7BBE87CE1F949B42006A02BA /* Resources */,
-				1F64DC56822E576BA8ADAF78 /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Rabbit;
-			productName = Rabbit;
-			productReference = 7BBE87D01F949B42006A02BA /* Rabbit.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		7BC83E271FC27347005F6784 /* Peacock */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7BC83E2F1FC27347005F6784 /* Build configuration list for PBXNativeTarget "Peacock" */;
@@ -555,6 +569,26 @@
 			productReference = 7BC83E281FC27347005F6784 /* Peacock.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		7BC83F481FC2B536005F6784 /* Rabbit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BC83F4E1FC2B536005F6784 /* Build configuration list for PBXNativeTarget "Rabbit" */;
+			buildPhases = (
+				87064052E30AE49DF666754E /* [CP] Check Pods Manifest.lock */,
+				7BC83F441FC2B536005F6784 /* Sources */,
+				7BC83F451FC2B536005F6784 /* Frameworks */,
+				7BC83F461FC2B536005F6784 /* Headers */,
+				7BC83F471FC2B536005F6784 /* Resources */,
+				EC2346A91DD56EF126BD1337 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rabbit;
+			productName = Rabbit;
+			productReference = 7BC83F491FC2B536005F6784 /* Rabbit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -568,11 +602,11 @@
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
-					7BBE87CF1F949B42006A02BA = {
+					7BC83E271FC27347005F6784 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
-					7BC83E271FC27347005F6784 = {
+					7BC83F481FC2B536005F6784 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
@@ -591,7 +625,7 @@
 			projectRoot = "";
 			targets = (
 				7BBE879D1F949A4D006A02BA /* YsSwift */,
-				7BBE87CF1F949B42006A02BA /* Rabbit */,
+				7BC83F481FC2B536005F6784 /* Rabbit */,
 				7BC83E271FC27347005F6784 /* Peacock */,
 			);
 		};
@@ -605,14 +639,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BBE87CE1F949B42006A02BA /* Resources */ = {
+		7BC83E261FC27347005F6784 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BC83E261FC27347005F6784 /* Resources */ = {
+		7BC83F471FC2B536005F6784 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -635,39 +669,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Peacock/Pods-Peacock-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1F64DC56822E576BA8ADAF78 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rabbit/Pods-Rabbit-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4F8FE95C147CDE77A4621585 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Rabbit-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5445B111CEDA6318F80A4DBD /* [CP] Check Pods Manifest.lock */ = {
@@ -703,6 +704,24 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YsSwift/Pods-YsSwift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		87064052E30AE49DF666754E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rabbit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E781C096ABB0A9FD9D93FF56 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -719,6 +738,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC2346A91DD56EF126BD1337 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Rabbit/Pods-Rabbit-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -742,20 +776,6 @@
 				7BBE87E11F949B59006A02BA /* UIImage+YS.swift in Sources */,
 				7BBE87E21F949B59006A02BA /* UIView+YS.swift in Sources */,
 				7BBE87E31F949B59006A02BA /* YSSwift.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BBE87CB1F949B42006A02BA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B16915E1F9A2C4B007010C0 /* UIButton+Target.swift in Sources */,
-				7BBE87E41F949B64006A02BA /* Cache.swift in Sources */,
-				7BBE87E51F949B64006A02BA /* ImageView+Target.swift in Sources */,
-				7BBE87ED1F94A550006A02BA /* Loader.swift in Sources */,
-				7BBE87EB1F94A1AA006A02BA /* DataDecoder.swift in Sources */,
-				7BBE87E61F949B64006A02BA /* Rabbit.swift in Sources */,
-				7BBE87E91F94A153006A02BA /* Manager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,6 +828,20 @@
 				7BC83F041FC27B51005F6784 /* YSUtils.swift in Sources */,
 				7BC83EEA1FC27B51005F6784 /* UITableView+Swift.swift in Sources */,
 				7BC83F001FC27B51005F6784 /* YSColor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BC83F441FC2B536005F6784 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BC83F511FC2B547005F6784 /* Cache.swift in Sources */,
+				7BC83F521FC2B547005F6784 /* Rabbit.swift in Sources */,
+				7BC83F531FC2B547005F6784 /* Manager.swift in Sources */,
+				7BC83F541FC2B547005F6784 /* DataDecoder.swift in Sources */,
+				7BC83F551FC2B547005F6784 /* Loader.swift in Sources */,
+				7BC83F561FC2B547005F6784 /* ImageView+Target.swift in Sources */,
+				7BC83F571FC2B547005F6784 /* UIButton+Target.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -969,48 +1003,6 @@
 			};
 			name = Release;
 		};
-		7BBE87D61F949B42006A02BA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3578DFAFAF07465AD2AF5132 /* Pods-Rabbit.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Rabbit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.Rabbit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		7BBE87D71F949B42006A02BA /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7DFB10B9703414DF169BDADC /* Pods-Rabbit.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Rabbit/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.Rabbit;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		7BC83E2D1FC27347005F6784 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 051A4EF8BFDA81AA46324452 /* Pods-Peacock.debug.xcconfig */;
@@ -1024,6 +1016,7 @@
 				INFOPLIST_FILE = Peacock/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"YSSWIFT_DEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.Peacock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
@@ -1045,7 +1038,52 @@
 				INFOPLIST_FILE = Peacock/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"YSSWIFT_DEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.Peacock;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7BC83F4F1FC2B536005F6784 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3578DFAFAF07465AD2AF5132 /* Pods-Rabbit.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rabbit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"YSSWIFT_DEBUG\"";
+				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.Rabbit;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BC83F501FC2B536005F6784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DFB10B9703414DF169BDADC /* Pods-Rabbit.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Rabbit/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"YSSWIFT_DEBUG\"";
+				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.Rabbit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
@@ -1074,20 +1112,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7BBE87D51F949B42006A02BA /* Build configuration list for PBXNativeTarget "Rabbit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BBE87D61F949B42006A02BA /* Debug */,
-				7BBE87D71F949B42006A02BA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		7BC83E2F1FC27347005F6784 /* Build configuration list for PBXNativeTarget "Peacock" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7BC83E2D1FC27347005F6784 /* Debug */,
 				7BC83E2E1FC27347005F6784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BC83F4E1FC2B536005F6784 /* Build configuration list for PBXNativeTarget "Rabbit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BC83F4F1FC2B536005F6784 /* Debug */,
+				7BC83F501FC2B536005F6784 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

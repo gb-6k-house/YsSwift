@@ -7,7 +7,9 @@
  ******************************************************************************/
 import Foundation
 import UIKit
-import YsSwift
+#if YSSWIFT_DEBUG
+    import YsSwift
+#endif
 
 //内存缓存
 public final class ImageCache {

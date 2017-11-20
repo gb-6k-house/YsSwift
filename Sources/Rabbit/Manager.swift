@@ -7,7 +7,10 @@
  ******************************************************************************/
 
 import Foundation
-import YsSwift
+#if YSSWIFT_DEBUG
+    import YsSwift
+#endif
+
 import Result
 
 //网络图片加载管理类
