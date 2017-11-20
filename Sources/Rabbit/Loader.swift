@@ -7,13 +7,12 @@
 //
 
 import Foundation
+import YsSwift
+import Result
 
-#if !COCOAPODS
-    import YsSwift
-#endif
 
 public protocol Loading {
-    func loadImage(with request: Request, token: CancellationToken?, completion: @escaping (Result<Image>) -> Void)
+    func loadImage(with request: Request, token: CancellationToken?, completion: @escaping (Result<Image, YsSwift.RequestError>) -> Void)
 }
 
 
@@ -29,7 +28,7 @@ public final class Loader: Loading {
 
     }
  
-    public func  loadImage(with request: Request, token: CancellationToken?, completion: @escaping (Result<Image>) -> Void) {
+    public func  loadImage(with request: Request, token: CancellationToken?, completion: @escaping (Result<Image, YsSwift.RequestError>) -> Void) {
         if token?.isCancelling == true { return } // Fast preflight check
         self.loadImage(with: Context(request: request, token: token, completion: completion))
 
@@ -48,7 +47,7 @@ public final class Loader: Loading {
         if let image = self.decoder.decode(data: response.0, response: response.1) {
             ctx.completion(.success(image))
         } else {
-            ctx.completion(.failure(Error.decodingFailed))
+            ctx.completion(.failure(.decodingFailed))
         }
 
     }
@@ -56,7 +55,7 @@ public final class Loader: Loading {
     private struct Context {
         let request: Request
         let token: CancellationToken?
-        let completion: (Result<Image>) -> Void
+        let completion: (Result<Image, YsSwift.RequestError>) -> Void
     }
     
     /// Error returns by `Loader` class itself. `Loader` might also return

@@ -7,10 +7,7 @@
  ******************************************************************************/
 import Foundation
 import UIKit
-
-#if !COCOAPODS
-    import YsSwift
-#endif
+import YsSwift
 
 //内存缓存
 public final class ImageCache {

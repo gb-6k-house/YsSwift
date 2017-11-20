@@ -7,9 +7,7 @@
  ******************************************************************************/
 
 import Foundation
-#if !COCOAPODS
-    import YsSwift
-#endif
+import YsSwift
 
 /// Decodes image data.
 public protocol DataDecoding {

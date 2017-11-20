@@ -7,9 +7,8 @@
  ******************************************************************************/
 
 import Foundation
-#if !COCOAPODS
-    import YsSwift
-#endif
+import YsSwift
+import Result
 
 //网络图片加载管理类
 //完成如下流程: 数据从网络中下载 ->数据缓存本地(硬盘+内存) ->  数据解析成图片 -> 返回上层应用
@@ -40,7 +39,7 @@ public final class Manager {
         }
     }
     
-    public typealias Handler = (Result<Image>, _ isFromMemoryCache: Bool) -> Void
+    public typealias Handler = (Result<Image, YsSwift.RequestError>, _ isFromMemoryCache: Bool) -> Void
     
     /// Loads an image and calls the given `handler`. The method itself
     /// **doesn't do** anything when the image is loaded - you have full
@@ -82,14 +81,14 @@ public final class Manager {
     /// Loads an image with a given request by using manager's cache and loader.
     ///
     /// - parameter completion: Gets called asynchronously on the main thread.
-    public func loadImage(with request: Request, token: CancellationToken?, completion: @escaping (Result<Image>) -> Void) {
+    public func loadImage(with request: Request, token: CancellationToken?, completion: @escaping (Result<Image, YsSwift.RequestError>) -> Void) {
             if token?.isCancelling == true { return } // Fast preflight check
             self._loadImage(with: request, token: token) { result in
                 DispatchQueue.main.async { completion(result) }
             }
     }
     
-    private func _loadImage(with request: Request, token: CancellationToken? = nil, completion: @escaping (Result<Image>) -> Void) {
+    private func _loadImage(with request: Request, token: CancellationToken? = nil, completion: @escaping (Result<Image, YsSwift.RequestError>) -> Void) {
         // Check if image is in memory cache
         if let image = cachedImage(for: request) {
             completion(.success(image))

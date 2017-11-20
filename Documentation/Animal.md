@@ -27,7 +27,7 @@ Include **YsSwift** functions
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'YsSwift',    '~> 0.2.0'
+    pod 'YsSwift',    '~> 0.3.0'
 end
 ```
 

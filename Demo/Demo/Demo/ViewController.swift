@@ -8,9 +8,7 @@
 
 import UIKit
 import YsSwift
-import Nuke
-import  SDWebImage
-class ViewController: UIViewController {
+class ViewController: YSBaseViewController {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nukeImageView: UIImageView!
@@ -35,11 +33,4 @@ class ViewController: UIViewController {
      }
 }
 
-extension UIButton : YsSwift.Target {
-    
-    public func handle(response: YsSwift.Result<YsSwift.Image>, isFromMemoryCache: Bool) {
-        guard let image = response.value else { return }
-        self.setImage(image, for: .normal)
-    }
-}
 

@@ -29,11 +29,27 @@ Pod::Spec.new do |s|
     ss.source_files  = "Sources/Animal/**/*"
     ss.framework  = "Foundation"
     ss.framework  = "UIKit"
+    ss.dependency "Result", "~> 3.0"
   end
 
   s.subspec "Rabbit" do |ss|
     ss.source_files = "Sources/Rabbit/"
     ss.dependency "YsSwift/Animal"
+  end
+
+  s.subspec "Peacock" do |ss|
+    ss.source_files = "Sources/Peacock/**/*"
+    ss.dependency "YsSwift/Animal"
+    ss.dependency 'RxCocoa', '3.6.1'
+    ss.dependency 'Moya/RxSwift', '8.0.5'
+    ss.dependency 'SnapKit', '3.2.0'
+    ss.dependency 'SwiftyJSON', '~> 3.1.1'
+    ss.dependency 'IQKeyboardManagerSwift', '~> 4.0.13'
+    ss.dependency 'libPhoneNumber-iOS', '~> 0.8'
+    ss.dependency 'ObjectMapper', '2.1.0'
+    ss.dependency 'FCUUID'
+    ss.dependency 'MJRefresh'
+    ss.dependency 'FDFullscreenPopGesture'
   end
 
 end

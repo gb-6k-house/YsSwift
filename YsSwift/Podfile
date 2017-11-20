@@ -2,9 +2,52 @@
 platform :ios, '9.0'
 
 target 'YsSwift' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    pod 'Result', '~> 3.0'
+end
+
+
+target 'Rabbit' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    pod 'YsSwift', :path => "../"
+    # Pods for Peacock
+    pod 'Moya/RxSwift', '8.0.5'
+    pod 'RxCocoa'
+    pod 'SnapKit', '3.2.0'
+    pod 'ObjectMapper', '2.1.0'
+    pod 'SwiftyJSON', '~> 3.1.1'
+    pod 'IQKeyboardManagerSwift', '~> 4.0.13'
+    pod 'libPhoneNumber-iOS', '~> 0.8'
+    pod 'FCUUID'
+    pod 'MJRefresh'
+    pod 'FDFullscreenPopGesture'
+end
+
+
+target 'Peacock' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
+  pod 'YsSwift', :path => "../"
+  # Pods for Peacock
+  pod 'Moya/RxSwift', '8.0.5'
+  pod 'RxCocoa'
+  pod 'SnapKit', '3.2.0'
+  pod 'ObjectMapper', '2.1.0'
+  pod 'SwiftyJSON', '~> 3.1.1'
+  pod 'IQKeyboardManagerSwift', '~> 4.0.13'
+  pod 'libPhoneNumber-iOS', '~> 0.8'
+  pod 'FCUUID'
+  pod 'MJRefresh'
+  pod 'FDFullscreenPopGesture'
+end
 
-  # Pods for YsSwift
-
+#配置pod工程中swift版本
+post_install do |installer|
+    installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+            config.build_settings['SWIFT_VERSION'] = '3.0'
+        end
+    end
 end

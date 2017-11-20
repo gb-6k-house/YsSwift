@@ -27,7 +27,7 @@ Include **YsSwift/Rabbit** functions
 use_frameworks!
 
 target 'YOUR_TARGET_NAME' do
-    pod 'YsSwift/Rabbit',    '~> 0.2.0'
+    pod 'YsSwift/Rabbit',    '~> 0.3.0'
 end
 ```
 
@@ -54,7 +54,7 @@ Rabbit库易扩展，你可以给任意对象实现网络图片加载的功能�
 ```swift
 extension UIButton : YsSwift.Target {
     
-    public func handle(response: YsSwift.Result<YsSwift.Image>, isFromMemoryCache: Bool) {
+    public func handle(response: Result<Image, YsSwift.RequestError>, isFromMemoryCache: Bool) {
         guard let image = response.value else { return }
         self.setImage(image, for: .normal)
     }

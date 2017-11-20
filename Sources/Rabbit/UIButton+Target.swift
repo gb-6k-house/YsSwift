@@ -6,9 +6,8 @@
  ** Copyright © 2017年 尧尚信息科技(www.yourshares.cn). All rights reserved
  ******************************************************************************/
 
-#if !COCOAPODS
-    import YsSwift
-#endif
+import YsSwift
+import Result
 
 import UIKit
 /// Alias for `UIButton`
@@ -17,7 +16,7 @@ public typealias Button = UIButton
 #if os(macOS) || os(iOS) || os(tvOS)
     
     extension Button: Target {
-        public func handle(response: Result<Image>, isFromMemoryCache: Bool) {
+        public func handle(response: Result<Image, YsSwift.RequestError>, isFromMemoryCache: Bool) {
             guard let image = response.value else { return }
             self.setImage(image, for: .normal)
         }

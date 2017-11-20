@@ -7,10 +7,8 @@
  ******************************************************************************/
 
 import Foundation
-
-#if !COCOAPODS
-    import YsSwift
-#endif
+import YsSwift
+import Result
 
 
 #if os(macOS)
@@ -29,7 +27,7 @@ import Foundation
     extension ImageView: Target {
         /// Displays an image on success. Runs `opacity` transition if
         /// the response was not from the memory cache.
-        public func handle(response: Result<Image>, isFromMemoryCache: Bool) {
+        public func handle(response: Result<Image, YsSwift.RequestError>, isFromMemoryCache: Bool) {
             guard let image = response.value else { return }
             self.image = image
             if !isFromMemoryCache {

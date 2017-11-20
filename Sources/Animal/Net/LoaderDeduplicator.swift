@@ -7,6 +7,7 @@
  ******************************************************************************/
 
 import Foundation
+import Result
 //处理网络请求
 //如果相同的url请求，在之前的请求回来之前，重复请求不在请求网络，等待之前的网络请求返回作为本次网络请求
 //LoaderDeduplicator 所有方法是线程安全的
@@ -22,13 +23,13 @@ public final  class LoaderDeduplicator: DataLoading{
         self.loader = loader
     }
     
-    public func loadData(with request: Request, token: CancellationToken?, completion: @escaping (Result<(Data, URLResponse)>) -> Void){
+    public func loadData(with request: Request, token: CancellationToken?, completion: @escaping (Result<(Data, URLResponse), RequestError>) -> Void){
         queue.async {
             self._loadData(with: request, token: token, completion: completion)
         }
     }
     
-    private func _loadData(with request: Request, token: CancellationToken?, completion: @escaping (Result<(Data, URLResponse)>) -> Void){
+    private func _loadData(with request: Request, token: CancellationToken?, completion: @escaping (Result<(Data, URLResponse), RequestError>) -> Void){
         let key = request.loadKey
         let task = tasks[key] ?? startTask(with: request, key: key)
         
@@ -52,7 +53,7 @@ public final  class LoaderDeduplicator: DataLoading{
     }
 
     
-    private func complete(_ task: Task, key: AnyHashable, result: Result<(Data, URLResponse)>) {
+    private func complete(_ task: Task, key: AnyHashable, result: Result<(Data, URLResponse), RequestError>) {
         guard tasks[key] === task else { return } // check if still registered
         task.handlers.forEach { $0(result) }
         tasks[key] = nil

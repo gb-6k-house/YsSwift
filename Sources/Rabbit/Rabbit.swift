@@ -7,10 +7,9 @@
  ******************************************************************************/
 
 import UIKit.UIImage
+import Result
 
-#if !COCOAPODS
-    import YsSwift
-#endif
+import YsSwift
 
 
 import UIKit.UIImage
@@ -20,7 +19,7 @@ public typealias Image = UIImage
 /// Represents an arbitrary target for image loading.
 public protocol Target: class {
     /// Callback that gets called when the request gets completed.
-    func handle(response: Result<Image>, isFromMemoryCache: Bool)
+    func handle(response: Result<Image, YsSwift.RequestError>, isFromMemoryCache: Bool)
 }
 
 open class Rabbit {

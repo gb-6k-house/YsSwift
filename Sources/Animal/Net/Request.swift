@@ -7,6 +7,16 @@
  ******************************************************************************/
 
 import Foundation
+import Result
+
+public enum RequestError: Swift.Error {
+    /// Indicates a response failed to decode request data.
+    case decodingFailed
+    /// Indicates a response failed with an invalid HTTP status code.
+    case statusCode(URLResponse?)
+    
+}
+
 
 public struct Request {
     public private(set) var container: Container
