@@ -214,6 +214,7 @@ open class YSPasscodeField: UIControl, UIKeyInput {
             return
         }
         passcode = passcode.substring(to: passcode.index(before: passcode.endIndex))
+        passcode.substring(to: <#T##String.Index#>)
     }
     
     public var isSecureTextEntry: Bool {

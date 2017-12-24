@@ -2,34 +2,11 @@
 
 This library supply some normal Swift base functions, likes String catgory, Data catgory etc.
 >---
-- **[Requirements](#Requirements)**
-- **[Installation](#Installation)**
 - **[Usage](#Usage)**
     - ***String Functions or Methods***
     - ***UIView category***
     - ***UIImage category***
 >--- 
-
-## Requirements
-
-* Xcode8.0+
-* Swift3.0+
-
-## Installation
-
-### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
-
-**Search with `pod search YsSwift` `**
-
-Include **YsSwift** functions
-```ruby
-# Podfile
-use_frameworks!
-
-target 'YOUR_TARGET_NAME' do
-    pod 'YsSwift',    '~> 0.3.0'
-end
-```
 
 ## Usage
 

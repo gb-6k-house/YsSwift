@@ -3,33 +3,9 @@
 Ligtly and extensional library for downloading and caching images from the web, likes [Nuke](Nuke).  
 
 >---
-- **[Requirements](#Requirements)**
-- **[Installation](#Installation)**
 - **[Usage](#Usage)**
 - **[Thanks](#Thanks)**
 >---
-
-## Requirements
-
-* Xcode8.0+
-* Swift3.0+
-
-## Installation
-
-### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
-
-**Search with `pod search YsSwift` `**
-
-Include **YsSwift/Rabbit** functions
-```ruby
-# Podfile
-use_frameworks!
-
-target 'YOUR_TARGET_NAME' do
-    pod 'YsSwift/Rabbit',    '~> 0.3.0'
-end
-```
-
 ## Usage
 
 More features, read [Demo](Demo)

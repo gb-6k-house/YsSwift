@@ -15,7 +15,7 @@
 - **[Introduction](#introduction)**
 - **[Sub-modules](#Sub-modules)**
 - **[Installation](#Installation)**
-  
+- **[Usage](#Usage)**
 >---
 ## Introduction
    YsSwift is a pure-Swift library with some sub-modules. Variable functions in this library. For example, there is a  UIImage category with a function to resize image size.  You can  read this doc ,  If you want get more information.
@@ -37,10 +37,33 @@
 
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
 
+### YsSwift version vs Swift version
+Below is a table that shows which version of YsSwift you should use for
+your Swift version.
+
+| Swift | YsSwfit       | Rabbit        |
+| ----- | ------------- |---------------|
+| 4.X   | >= 1.0.1      | >= 1.0.1      |
+| 3.X   | >=0.3.3       | >=0.3.3       |
+
+**Search with `pod search YsSwift`**
+```ruby
+# Podfile
+use_frameworks!
+
+target 'YOUR_TARGET_NAME' do
+    pod 'YsSwift'
+end
+
+target 'YOUR_TARGET_NAME' do
+    pod 'YsSwift/Rabbit'
+end
+```
+
+## Usage
+
 * [YsSwift](Documentation/Animal.md)
 * [YsSwift/Rabbit](Documentation/Rabbit.md)
-
-
 
 [iOS-url]: https://developer.apple.com/library/content/navigation/#section=Platforms&topic=iOS
 

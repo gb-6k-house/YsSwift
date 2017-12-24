@@ -476,7 +476,7 @@ class YSOtherValueOptionConfig<Element>: YSBaseOptionConfig {
             } else {
                 self.subTitle.value = "\(v)"
             }
-        }).addDisposableTo(self.bag!)
+        }).disposed(by: self.bag!)
     }
 
     func saveValue() {
