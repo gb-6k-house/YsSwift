@@ -16,8 +16,8 @@ extension YSSwift where Base: UITextField {
     public func changePlaceholderColor(_ color : UIColor) {
         let attrPlaceholder = NSMutableAttributedString.init(string: self.base.placeholder!)
         let dict = NSMutableDictionary.init()
-        dict[NSForegroundColorAttributeName] = color;
-        attrPlaceholder.addAttributes(dict as! [String : Any], range: NSMakeRange(0, (self.base.placeholder?.characters.count)!))
+        dict[NSAttributedStringKey.foregroundColor] = color;
+        attrPlaceholder.addAttributes(dict as! [NSAttributedStringKey : Any], range: NSMakeRange(0, (self.base.placeholder?.characters.count)!))
         self.base.attributedPlaceholder = attrPlaceholder;
     }
 }

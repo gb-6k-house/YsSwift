@@ -9,7 +9,7 @@
 - **[说明](#说明)**
 - **[子模块](#子模块)**
 - **[安装](#安装)**
-
+- **[详细使用说明](#详细使用说明)**
 >---
 ## 说明
 
@@ -32,13 +32,31 @@
 
 
 ## 安装
-
 ### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
    支持CocoaPods方式进行安装
+### YsSwift版本和Swift版本对比
+
+| Swift | YsSwfit       | Rabbit        |
+| ----- | ------------- |---------------|
+| 4.X   | >= 1.0        | >= 1.0        |
+| 3.X   | >=0.3.3       | >=0.3.3       |
+
+**Search with `pod search YsSwift`**
+```ruby
+# Podfile
+use_frameworks!
+
+target 'YOUR_TARGET_NAME' do
+    pod 'YsSwift'
+end
+
+target 'YOUR_TARGET_NAME' do
+    pod 'YsSwift/Rabbit'
+end
+```
+## 详细使用说明
 * [YsSwift](Animal_CN.md)
 * [YsSwift/Rabbit](Rabbit_CN.md)
-
-
 
 [iOS-url]: https://developer.apple.com/library/content/navigation/#section=Platforms&topic=iOS
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56746DA3EA65EE8F7D9699B5 /* Pods_LibApp_Peacock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB9D3FAAFBFA778E4A48F49E /* Pods_LibApp_Peacock.framework */; };
 		681867F6E353CFC5FD273D41 /* Pods_Rabbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E678278AE0AC7D312017386C /* Pods_Rabbit.framework */; };
 		7B86F7191FC2D0710018C573 /* Peacock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86F7181FC2D0710018C573 /* Peacock.swift */; };
 		7B86F7571FC2D35A0018C573 /* Rabbit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B86F7551FC2D35A0018C573 /* Rabbit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -79,16 +80,23 @@
 		7BC83F051FC27B51005F6784 /* YSAppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC83ED61FC27B50005F6784 /* YSAppManager.swift */; };
 		7BC83F211FC28B37005F6784 /* YSSwiftError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC83F201FC28B37005F6784 /* YSSwiftError.swift */; };
 		C7F5BEDBCC2EE1D35BE1C679 /* Pods_Peacock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 124FCFB694358494D598957E /* Pods_Peacock.framework */; };
+		CB47FDF07B8B73B4C2061457 /* Pods_LibApp_Rabbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9A2DED47624176669C0E4F /* Pods_LibApp_Rabbit.framework */; };
 		D1ABE60C0F6AE72D662E79F6 /* Pods_YsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A755192FA4CC6096364C9F9E /* Pods_YsSwift.framework */; };
+		E03448F307F032FF7AFFC22A /* Pods_LibApp_YsSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D98A49663BA5E07FEEBA114B /* Pods_LibApp_YsSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		051A4EF8BFDA81AA46324452 /* Pods-Peacock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peacock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Peacock/Pods-Peacock.debug.xcconfig"; sourceTree = "<group>"; };
 		0530A2F492F64DA9FA153378 /* Pods-YsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YsSwift/Pods-YsSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		10AE832B194444955775074E /* Pods-LibApp-Peacock.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibApp-Peacock.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibApp-Peacock/Pods-LibApp-Peacock.debug.xcconfig"; sourceTree = "<group>"; };
 		124FCFB694358494D598957E /* Pods_Peacock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Peacock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		16C026F9C55835E0B9756538 /* Pods-Peacock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Peacock.release.xcconfig"; path = "Pods/Target Support Files/Pods-Peacock/Pods-Peacock.release.xcconfig"; sourceTree = "<group>"; };
+		2B9605920F2D170173254135 /* Pods-LibApp-YsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibApp-YsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibApp-YsSwift/Pods-LibApp-YsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		3578DFAFAF07465AD2AF5132 /* Pods-Rabbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rabbit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rabbit/Pods-Rabbit.debug.xcconfig"; sourceTree = "<group>"; };
+		5E54626B044EFED1CBC23154 /* Pods-LibApp-Peacock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibApp-Peacock.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibApp-Peacock/Pods-LibApp-Peacock.release.xcconfig"; sourceTree = "<group>"; };
+		75571DC80B066DFFCD0A9686 /* Pods-LibApp-Rabbit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibApp-Rabbit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibApp-Rabbit/Pods-LibApp-Rabbit.release.xcconfig"; sourceTree = "<group>"; };
 		7B16915C1F9A2C35007010C0 /* UIButton+Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Target.swift"; sourceTree = "<group>"; };
+		7B84E7511FEF5694006CDEF6 /* YsSwift.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = YsSwift.podspec; sourceTree = "<group>"; };
 		7B86F7181FC2D0710018C573 /* Peacock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peacock.swift; sourceTree = "<group>"; };
 		7B86F7531FC2D35A0018C573 /* Rabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B86F7551FC2D35A0018C573 /* Rabbit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rabbit.h; sourceTree = "<group>"; };
@@ -165,9 +173,14 @@
 		7BC83ED61FC27B50005F6784 /* YSAppManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSAppManager.swift; sourceTree = "<group>"; };
 		7BC83F201FC28B37005F6784 /* YSSwiftError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YSSwiftError.swift; sourceTree = "<group>"; };
 		7DFB10B9703414DF169BDADC /* Pods-Rabbit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rabbit.release.xcconfig"; path = "Pods/Target Support Files/Pods-Rabbit/Pods-Rabbit.release.xcconfig"; sourceTree = "<group>"; };
+		9C9A2DED47624176669C0E4F /* Pods_LibApp_Rabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibApp_Rabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A755192FA4CC6096364C9F9E /* Pods_YsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF4DE7F44338624BBDD07169 /* Pods-LibApp-YsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibApp-YsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibApp-YsSwift/Pods-LibApp-YsSwift.release.xcconfig"; sourceTree = "<group>"; };
 		CC099B6082A0986FC3AC60BF /* Pods-YsSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YsSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-YsSwift/Pods-YsSwift.release.xcconfig"; sourceTree = "<group>"; };
+		D4401DB8FE5FB1BC95037D53 /* Pods-LibApp-Rabbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibApp-Rabbit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibApp-Rabbit/Pods-LibApp-Rabbit.debug.xcconfig"; sourceTree = "<group>"; };
+		D98A49663BA5E07FEEBA114B /* Pods_LibApp_YsSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibApp_YsSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E678278AE0AC7D312017386C /* Pods_Rabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB9D3FAAFBFA778E4A48F49E /* Pods_LibApp_Peacock.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LibApp_Peacock.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				681867F6E353CFC5FD273D41 /* Pods_Rabbit.framework in Frameworks */,
+				CB47FDF07B8B73B4C2061457 /* Pods_LibApp_Rabbit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1ABE60C0F6AE72D662E79F6 /* Pods_YsSwift.framework in Frameworks */,
+				E03448F307F032FF7AFFC22A /* Pods_LibApp_YsSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7F5BEDBCC2EE1D35BE1C679 /* Pods_Peacock.framework in Frameworks */,
+				56746DA3EA65EE8F7D9699B5 /* Pods_LibApp_Peacock.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +233,7 @@
 				7BBE879F1F949A4D006A02BA /* Products */,
 				C459FBE5FB69A9A5A288C65B /* Pods */,
 				A4BCAE5D4320E43B7337BF4E /* Frameworks */,
+				7B84E7511FEF5694006CDEF6 /* YsSwift.podspec */,
 			);
 			sourceTree = "<group>";
 		};
@@ -449,6 +466,9 @@
 				A755192FA4CC6096364C9F9E /* Pods_YsSwift.framework */,
 				124FCFB694358494D598957E /* Pods_Peacock.framework */,
 				E678278AE0AC7D312017386C /* Pods_Rabbit.framework */,
+				FB9D3FAAFBFA778E4A48F49E /* Pods_LibApp_Peacock.framework */,
+				9C9A2DED47624176669C0E4F /* Pods_LibApp_Rabbit.framework */,
+				D98A49663BA5E07FEEBA114B /* Pods_LibApp_YsSwift.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -462,6 +482,12 @@
 				7DFB10B9703414DF169BDADC /* Pods-Rabbit.release.xcconfig */,
 				0530A2F492F64DA9FA153378 /* Pods-YsSwift.debug.xcconfig */,
 				CC099B6082A0986FC3AC60BF /* Pods-YsSwift.release.xcconfig */,
+				10AE832B194444955775074E /* Pods-LibApp-Peacock.debug.xcconfig */,
+				5E54626B044EFED1CBC23154 /* Pods-LibApp-Peacock.release.xcconfig */,
+				D4401DB8FE5FB1BC95037D53 /* Pods-LibApp-Rabbit.debug.xcconfig */,
+				75571DC80B066DFFCD0A9686 /* Pods-LibApp-Rabbit.release.xcconfig */,
+				2B9605920F2D170173254135 /* Pods-LibApp-YsSwift.debug.xcconfig */,
+				AF4DE7F44338624BBDD07169 /* Pods-LibApp-YsSwift.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -833,7 +859,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.Rabbit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -855,7 +881,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.Rabbit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -989,7 +1015,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.YsSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1010,7 +1036,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.YsSwift;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1032,7 +1058,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.Peacock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1054,7 +1080,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yourshares.cn.Peacock;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

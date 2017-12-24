@@ -102,8 +102,8 @@ open class YSBubbleView: YSPopupView {
         self.snp.makeConstraints { (make) in
             make.width.equalTo(self.popWidth)
         }
-        self.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .vertical)
-        self.setContentHuggingPriority(UILayoutPriorityFittingSizeLevel, for: .horizontal)
+        self.setContentCompressionResistancePriority(UILayoutPriority.required, for: .vertical)
+        self.setContentHuggingPriority(UILayoutPriority.fittingSizeLevel, for: .horizontal)
 
         ({ (view: UIImageView) in
             view.contentMode = .center
@@ -139,150 +139,7 @@ open class YSBubbleView: YSPopupView {
         self.layoutIfNeeded()
     }
 
-    override func showAnimation(completion closure: ((_ popupView: YSPopupView, _ finished: Bool) -> Void)?) {
-
-        if self.superview == nil {
-            self.targetView!.YS_dimBackgroundView.addSubview(self)
-            self.targetView!.YS_dimBackgroundView.layoutIfNeeded()
-            self.targetView!.YS_dimBackgroundAnimatingDuration = 0.15
-            self.duration = self.targetView!.YS_dimBackgroundAnimatingDuration
-        }
-
-        typealias Config = YSBubbleViewConfig
-
-        let center = self.getAnchorPosition(self.anchorView)
-        let widthOffset = self.anchorView.frame.size.width / 2.0
-        let heightOffset = self.anchorView.frame.size.height / 2.0
-        let arrowOffset = Config.arrowWidth * 2 + Config.cornerRadius
-        let xOffsetRatio = arrowOffset / self.frame.width
-        let yOffsetRatio = arrowOffset / self.frame.height
-
-        switch self.anchorDirection {
-        case .topLeft:
-            self.layer.anchorPoint = CGPoint(x: xOffsetRatio, y: 0.0)
-            self.layer.position = CGPoint(x: center.x, y: center.y + heightOffset)
-        case .leftTop:
-            self.layer.anchorPoint = CGPoint(x: 0.0, y: yOffsetRatio)
-            self.layer.position = CGPoint(x: center.x + widthOffset, y: center.y)
-        case .topRight:
-            self.layer.anchorPoint = CGPoint(x: 1.0 - xOffsetRatio, y: 0.0)
-            self.layer.position = CGPoint(x: center.x, y: center.y + heightOffset)
-        case .rightTop:
-            self.layer.anchorPoint = CGPoint(x: 1.0, y: yOffsetRatio)
-            self.layer.position = CGPoint(x: center.x - widthOffset, y: center.y)
-        case .bottomLeft:
-            self.layer.anchorPoint = CGPoint(x: xOffsetRatio, y: 1.0)
-            self.layer.position = CGPoint(x: center.x, y: center.y - heightOffset)
-        case .leftBottom:
-            self.layer.anchorPoint = CGPoint(x: 0.0, y: 1.0 - yOffsetRatio)
-            self.layer.position = CGPoint(x: center.x + widthOffset, y: center.y)
-        case .bottomRight:
-            self.layer.anchorPoint = CGPoint(x: 1.0 - xOffsetRatio, y: 1.0)
-            self.layer.position = CGPoint(x: center.x, y: center.y - heightOffset)
-        case .rightBottom:
-            self.layer.anchorPoint = CGPoint(x: 1.0, y: 1.0 - yOffsetRatio)
-            self.layer.position = CGPoint(x: center.x - widthOffset, y: center.y)
-        case .top:
-            self.layer.anchorPoint = CGPoint(x: 0.5, y: 0.0)
-            self.layer.position = CGPoint(x: center.x, y: center.y + heightOffset)
-        case .bottom:
-            self.layer.anchorPoint = CGPoint(x: 0.5, y: 1.0)
-            self.layer.position = CGPoint(x: center.x, y: center.y - heightOffset)
-        case .left:
-            self.layer.anchorPoint = CGPoint(x: 0.0, y: 0.5)
-            self.layer.position = CGPoint(x: center.x + widthOffset, y: center.y)
-        case .right:
-            self.layer.anchorPoint = CGPoint(x: 1.0, y: 0.5)
-            self.layer.position = CGPoint(x: center.x - widthOffset, y: center.y)
-        default:
-            break
-        }
-
-        self.arrowView.snp.makeConstraints { (make) in
-            make.size.equalTo(CGSize(width: 2.0 * (Config.arrowWidth + Config.cornerRadius), height: 2.0 * (Config.arrowWidth + Config.cornerRadius)))
-
-            switch self.anchorDirection {
-            case .topLeft:
-                make.centerY.equalTo(self.tableView.snp.top)
-                make.left.equalTo(self.tableView.snp.left)
-            case .leftTop:
-                make.centerX.equalTo(self.tableView.snp.left)
-                make.top.equalTo(self.tableView.snp.top)
-            case .topRight:
-                make.centerY.equalTo(self.tableView.snp.top)
-                make.right.equalTo(self.tableView.snp.right)
-            case .rightTop:
-                make.centerX.equalTo(self.tableView.snp.right)
-                make.top.equalTo(self.tableView.snp.top)
-            case .bottomLeft:
-                make.centerY.equalTo(self.tableView.snp.bottom)
-                make.left.equalTo(self.tableView.snp.left)
-            case .leftBottom:
-                make.centerX.equalTo(self.tableView.snp.left)
-                make.bottom.equalTo(self.tableView.snp.bottom)
-            case .bottomRight:
-                make.centerY.equalTo(self.tableView.snp.bottom)
-                make.right.equalTo(self.tableView.snp.right)
-            case .rightBottom:
-                make.centerX.equalTo(self.tableView.snp.right)
-                make.bottom.equalTo(self.tableView.snp.bottom)
-            case .top:
-                make.centerY.equalTo(self.tableView.snp.top)
-                make.centerX.equalTo(self.tableView.snp.centerX)
-            case .bottom:
-                make.centerY.equalTo(self.tableView.snp.bottom)
-                make.centerX.equalTo(self.tableView.snp.centerX)
-            case .left:
-                make.centerY.equalTo(self.tableView.snp.centerY)
-                make.centerX.equalTo(self.tableView.snp.left)
-            case .right:
-                make.centerY.equalTo(self.tableView.snp.centerY)
-                make.centerX.equalTo(self.tableView.snp.right)
-            default:
-                break
-            }
-        }
-
-        self.layer.transform = CATransform3DMakeScale(0.01, 0.01, 1.0)
-
-        UIView.animate(
-            withDuration: self.duration,
-            delay: 0.0,
-            options: [
-                UIViewAnimationOptions.curveEaseOut,
-                UIViewAnimationOptions.beginFromCurrentState
-            ],
-            animations: {
-                self.layer.transform = CATransform3DIdentity
-            },
-            completion: { (finished: Bool) in
-                if let completionClosure = closure {
-                    completionClosure(self, finished)
-                }
-        })
-    }
-
-    override func hideAnimation(completion closure: ((_ popupView: YSPopupView, _ finished: Bool) -> Void)?) {
-
-        UIView.animate(
-            withDuration: self.duration,
-            delay: 0.0,
-            options: [
-                UIViewAnimationOptions.curveEaseIn,
-                UIViewAnimationOptions.beginFromCurrentState
-            ],
-            animations: {
-                self.layer.transform = CATransform3DMakeScale(0.01, 0.01, 1.0)
-            },
-            completion: { (finished: Bool) in
-                if finished {
-                    self.removeFromSuperview()
-                }
-                if let completionClosure = closure {
-                    completionClosure(self, finished)
-                }
-        })
-    }
+ 
 
     fileprivate func getAnchorWindow(_ anchorView: UIView) -> UIWindow {
 
@@ -360,8 +217,151 @@ open class YSBubbleView: YSPopupView {
             return .top
         }
     }
+    override func showAnimation(completion closure: ((_ popupView: YSPopupView, _ finished: Bool) -> Void)?) {
+        
+        if self.superview == nil {
+            self.targetView!.YS_dimBackgroundView.addSubview(self)
+            self.targetView!.YS_dimBackgroundView.layoutIfNeeded()
+            self.targetView!.YS_dimBackgroundAnimatingDuration = 0.15
+            self.duration = self.targetView!.YS_dimBackgroundAnimatingDuration
+        }
+        
+        typealias Config = YSBubbleViewConfig
+        
+        let center = self.getAnchorPosition(self.anchorView)
+        let widthOffset = self.anchorView.frame.size.width / 2.0
+        let heightOffset = self.anchorView.frame.size.height / 2.0
+        let arrowOffset = Config.arrowWidth * 2 + Config.cornerRadius
+        let xOffsetRatio = arrowOffset / self.frame.width
+        let yOffsetRatio = arrowOffset / self.frame.height
+        
+        switch self.anchorDirection {
+        case .topLeft:
+            self.layer.anchorPoint = CGPoint(x: xOffsetRatio, y: 0.0)
+            self.layer.position = CGPoint(x: center.x, y: center.y + heightOffset)
+        case .leftTop:
+            self.layer.anchorPoint = CGPoint(x: 0.0, y: yOffsetRatio)
+            self.layer.position = CGPoint(x: center.x + widthOffset, y: center.y)
+        case .topRight:
+            self.layer.anchorPoint = CGPoint(x: 1.0 - xOffsetRatio, y: 0.0)
+            self.layer.position = CGPoint(x: center.x, y: center.y + heightOffset)
+        case .rightTop:
+            self.layer.anchorPoint = CGPoint(x: 1.0, y: yOffsetRatio)
+            self.layer.position = CGPoint(x: center.x - widthOffset, y: center.y)
+        case .bottomLeft:
+            self.layer.anchorPoint = CGPoint(x: xOffsetRatio, y: 1.0)
+            self.layer.position = CGPoint(x: center.x, y: center.y - heightOffset)
+        case .leftBottom:
+            self.layer.anchorPoint = CGPoint(x: 0.0, y: 1.0 - yOffsetRatio)
+            self.layer.position = CGPoint(x: center.x + widthOffset, y: center.y)
+        case .bottomRight:
+            self.layer.anchorPoint = CGPoint(x: 1.0 - xOffsetRatio, y: 1.0)
+            self.layer.position = CGPoint(x: center.x, y: center.y - heightOffset)
+        case .rightBottom:
+            self.layer.anchorPoint = CGPoint(x: 1.0, y: 1.0 - yOffsetRatio)
+            self.layer.position = CGPoint(x: center.x - widthOffset, y: center.y)
+        case .top:
+            self.layer.anchorPoint = CGPoint(x: 0.5, y: 0.0)
+            self.layer.position = CGPoint(x: center.x, y: center.y + heightOffset)
+        case .bottom:
+            self.layer.anchorPoint = CGPoint(x: 0.5, y: 1.0)
+            self.layer.position = CGPoint(x: center.x, y: center.y - heightOffset)
+        case .left:
+            self.layer.anchorPoint = CGPoint(x: 0.0, y: 0.5)
+            self.layer.position = CGPoint(x: center.x + widthOffset, y: center.y)
+        case .right:
+            self.layer.anchorPoint = CGPoint(x: 1.0, y: 0.5)
+            self.layer.position = CGPoint(x: center.x - widthOffset, y: center.y)
+        default:
+            break
+        }
+        
+        self.arrowView.snp.makeConstraints { (make) in
+            make.size.equalTo(CGSize(width: 2.0 * (Config.arrowWidth + Config.cornerRadius), height: 2.0 * (Config.arrowWidth + Config.cornerRadius)))
+            
+            switch self.anchorDirection {
+            case .topLeft:
+                make.centerY.equalTo(self.tableView.snp.top)
+                make.left.equalTo(self.tableView.snp.left)
+            case .leftTop:
+                make.centerX.equalTo(self.tableView.snp.left)
+                make.top.equalTo(self.tableView.snp.top)
+            case .topRight:
+                make.centerY.equalTo(self.tableView.snp.top)
+                make.right.equalTo(self.tableView.snp.right)
+            case .rightTop:
+                make.centerX.equalTo(self.tableView.snp.right)
+                make.top.equalTo(self.tableView.snp.top)
+            case .bottomLeft:
+                make.centerY.equalTo(self.tableView.snp.bottom)
+                make.left.equalTo(self.tableView.snp.left)
+            case .leftBottom:
+                make.centerX.equalTo(self.tableView.snp.left)
+                make.bottom.equalTo(self.tableView.snp.bottom)
+            case .bottomRight:
+                make.centerY.equalTo(self.tableView.snp.bottom)
+                make.right.equalTo(self.tableView.snp.right)
+            case .rightBottom:
+                make.centerX.equalTo(self.tableView.snp.right)
+                make.bottom.equalTo(self.tableView.snp.bottom)
+            case .top:
+                make.centerY.equalTo(self.tableView.snp.top)
+                make.centerX.equalTo(self.tableView.snp.centerX)
+            case .bottom:
+                make.centerY.equalTo(self.tableView.snp.bottom)
+                make.centerX.equalTo(self.tableView.snp.centerX)
+            case .left:
+                make.centerY.equalTo(self.tableView.snp.centerY)
+                make.centerX.equalTo(self.tableView.snp.left)
+            case .right:
+                make.centerY.equalTo(self.tableView.snp.centerY)
+                make.centerX.equalTo(self.tableView.snp.right)
+            default:
+                break
+            }
+        }
+        
+        self.layer.transform = CATransform3DMakeScale(0.01, 0.01, 1.0)
+        
+        UIView.animate(
+            withDuration: self.duration,
+            delay: 0.0,
+            options: [
+                UIViewAnimationOptions.curveEaseOut,
+                UIViewAnimationOptions.beginFromCurrentState
+            ],
+            animations: {
+                self.layer.transform = CATransform3DIdentity
+        },
+            completion: { (finished: Bool) in
+                if let completionClosure = closure {
+                    completionClosure(self, finished)
+                }
+        })
+    }
+    
+    override func hideAnimation(completion closure: ((_ popupView: YSPopupView, _ finished: Bool) -> Void)?) {
+        
+        UIView.animate(
+            withDuration: self.duration,
+            delay: 0.0,
+            options: [
+                UIViewAnimationOptions.curveEaseIn,
+                UIViewAnimationOptions.beginFromCurrentState
+            ],
+            animations: {
+                self.layer.transform = CATransform3DMakeScale(0.01, 0.01, 1.0)
+        },
+            completion: { (finished: Bool) in
+                if finished {
+                    self.removeFromSuperview()
+                }
+                if let completionClosure = closure {
+                    completionClosure(self, finished)
+                }
+        })
+    }
 }
-
 extension YSBubbleView: UITableViewDelegate, UITableViewDataSource {
     public func numberOfSections(in tableView: UITableView) -> Int {
         return 1

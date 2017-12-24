@@ -18,23 +18,14 @@ public struct YSTargetRequest {
     public var validate: Bool {
         return false
     }
-    public var parameterEncoding: Moya.ParameterEncoding {
-        switch self.method {
-        case .post:
-            return JSONEncoding.default
-        default:
-            return URLEncoding.default
-            
-        }
-    }
-    
+    public var headers: [String: String]?
     public init(
         path: String = "",
         method: Moya.Method = .get,
         parameters: [String: Any]? = nil,
         sampleData: Data = Data(),
         baseURL: URL? = nil,
-        task: Task = Task.request
+        task: Task = Task.requestPlain
         ) {
         self.path = path
         self.method = method
@@ -47,7 +38,6 @@ public struct YSTargetRequest {
 
 
 public class YSStructTarget: TargetType {
-    
     fileprivate(set) var api: TargetType
     
     public init(_ api: TargetType) {
@@ -65,9 +55,6 @@ public class YSStructTarget: TargetType {
     public var method: Moya.Method {
         return self.api.method
     }
-    public var parameters: [String: Any]? {
-        return self.api.parameters
-    }
     public var sampleData: Data {
         return self.api.sampleData
     }
@@ -77,8 +64,8 @@ public class YSStructTarget: TargetType {
     public var validate: Bool {
         return self.api.validate
     }
-    public var parameterEncoding: Moya.ParameterEncoding {
-        return self.api.parameterEncoding
+    public var headers: [String: String]? {
+        return self.api.headers
     }
 }
 

@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YsSwift"
-  s.version      = "0.3.3"
+  s.version      = "1.0.0"
   s.summary      = "Variable Solutions written in Swift"
   s.description  = <<-DESC
   YsSwift. supply variable function classes  written in Swift .for examples:
@@ -40,16 +40,18 @@ Pod::Spec.new do |s|
   s.subspec "Peacock" do |ss|
     ss.source_files = "Sources/Peacock/**/*"
     ss.dependency "YsSwift/Animal"
-    ss.dependency 'RxCocoa', '3.6.1'
-    ss.dependency 'Moya/RxSwift', '8.0.5'
-    ss.dependency 'SnapKit', '3.2.0'
+    ss.dependency 'Moya', '9.0.0'
+    ss.dependency 'RxSwift', '4.0.0'
+    ss.dependency 'RxCocoa', '4.0.0'
+
+    ss.dependency 'SnapKit', '~> 4.0.0'
     ss.dependency 'SwiftyJSON', '~> 3.1.1'
-    ss.dependency 'IQKeyboardManagerSwift', '~> 4.0.13'
+    ss.dependency 'IQKeyboardManagerSwift', '5.0.0'
     ss.dependency 'libPhoneNumber-iOS', '~> 0.8'
     ss.dependency 'ObjectMapper', '2.1.0'
-    ss.dependency 'FCUUID'
-    ss.dependency 'MJRefresh'
-    ss.dependency 'FDFullscreenPopGesture'
+    ss.dependency 'FCUUID', '1.3.1'
+    ss.dependency 'MJRefresh', '~> 3.1.15.1'
+    ss.dependency 'FDFullscreenPopGesture', '~> 1.1'
   end
 
 end

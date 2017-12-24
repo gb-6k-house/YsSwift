@@ -172,8 +172,8 @@ open class YSBaseViewController: UIViewController, UINavigationBarDelegate {
                 nav.navigationBar.ys.customize({ (view) in
                     view.setBackgroundImage(UIImage.colorImage( YSBaseUIConfigs.navigationBackgroudColor, size: CGSize(width: UIScreen.main.bounds.width, height: 64)), for: .default)
                     view.titleTextAttributes = [
-                        NSForegroundColorAttributeName: YSBaseUIConfigs.navigationTitleColor,
-                        NSFontAttributeName: YSBaseUIConfigs.navigationTitleFont
+                        NSAttributedStringKey.foregroundColor: YSBaseUIConfigs.navigationTitleColor,
+                        NSAttributedStringKey.font: YSBaseUIConfigs.navigationTitleFont
                     ]
                     view.shadowImage = UIImage()
                 })
@@ -222,8 +222,8 @@ open class YSBaseViewController: UIViewController, UINavigationBarDelegate {
                     view.setBackgroundImage(UIImage.colorImage(config.backgourdColor, size: CGSize(width: UIScreen.main.bounds.width, height: 64)), for: .default)
                     view.shadowImage = UIImage()
                     view.titleTextAttributes = [
-                        NSForegroundColorAttributeName: config.titleColor,
-                        NSFontAttributeName: config.titleFont
+                        NSAttributedStringKey.foregroundColor: config.titleColor,
+                        NSAttributedStringKey.font: config.titleFont
                     ]
                     view.tintColor = YSBaseUIConfigs.navigationBackgroudColor
                 }
@@ -244,7 +244,7 @@ open class YSBaseViewController: UIViewController, UINavigationBarDelegate {
         
     }
     
-    open func actionBack() {
+    @objc open func actionBack() {
         guard let nav = self.navigationController, nav.viewControllers.count > 1 else {
             self.ys.dismiss()
             return

@@ -4,33 +4,9 @@ Rabbit是纯Swift编写的轻量级，易扩展的网络图片加载框架，支
 
 
 >---
-- **[版本要求](#版本要求)**
-- **[安装说明](#安装说明)**
 - **[使用说明](#使用说明)**
 - **[特别鸣谢](#特别鸣谢)**
 >---
-
-## 版本要求
-
-* Xcode8.0 或 之后的版本
-* Swift3.2 或 之后的版本
-
-## 安装说明
-
-### [CocoaPods](https://guides.cocoapods.org/using/using-cocoapods.html)
-
-**Search with `pod search YsSwift`**
-
-Include **YsSwift/Rabbit** functions
-```ruby
-# Podfile
-use_frameworks!
-
-target 'YOUR_TARGET_NAME' do
-    pod 'YsSwift/Rabbit',    '~> 0.3.0'
-end
-```
-
 ## 使用说明
 
 下面是部分功能的说明。更多的功能使用请参照[Demo][Demo]

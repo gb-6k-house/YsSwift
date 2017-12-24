@@ -62,7 +62,7 @@ open class YSUtils: NSObject {
 
     static func calculateTextSize(_ string: String, font: UIFont) -> CGSize {
         let nsstring = string as NSString
-        let rect = nsstring.boundingRect(with: CGSize(width: 10000, height: 100), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let rect = nsstring.boundingRect(with: CGSize(width: 10000, height: 100), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         return CGSize(width: ceil(rect.size.width), height: ceil(rect.size.height))
     }
 

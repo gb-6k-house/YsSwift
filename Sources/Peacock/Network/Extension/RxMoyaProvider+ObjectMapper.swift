@@ -15,7 +15,7 @@ import SwiftyJSON
 #endif
 
 
-extension RxMoyaProvider {
+extension MoyaProvider {
 
     public func requestJSON(_ token: Target) -> Observable<JSON?> {
 

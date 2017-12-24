@@ -129,10 +129,6 @@ open class YSPopupView: UIView, YSPopupable {
     open static func hideAll() {
         NotificationCenter.default.post(name: Notification.Name(rawValue: YSPopupNotification.hideAll), object: self.self)
     }
-}
-
-extension YSPopupView {
-
     func showKeyboard() {
 
     }

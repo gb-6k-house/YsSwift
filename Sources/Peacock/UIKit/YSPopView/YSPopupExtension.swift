@@ -173,7 +173,7 @@ extension UIView {
 		}
 	}
 
-	func YS_actionTapWild() {
+    @objc func YS_actionTapWild() {
 		if self.YS_dimTouchWildToHide && !self.YS_dimBackgroundAnimating {
 			for view in self.YS_dimBackgroundView.subviews {
 				if view.isKind(of: YSPopupView.self) {

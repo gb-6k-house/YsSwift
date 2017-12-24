@@ -327,7 +327,7 @@ class YSAppConfigTextCell: YSValue1Cell, UITextFieldDelegate {
             })
         })
     }
-    public func done() {
+    @objc public func done() {
         config?.text = self.textField.text
         config?.didSelected()
         self.ys.viewController?.ys.pop()

@@ -23,7 +23,7 @@ extension YSSwift where Base: NSMutableAttributedString {
             let end = self.base.string.characters.distance(from: self.base.string.startIndex, to: range.upperBound)
             let length = end - start
             // let length = <#T##String.CharacterView corresponding to your index##String.CharacterView#>.distance(from: range.lowerBound, to: range.upperBound)
-            let attrs = [NSForegroundColorAttributeName: color]
+            let attrs = [NSAttributedStringKey.foregroundColor: color]
             self.base.setAttributes(attrs, range: NSRange(location: start, length: length))
 
         }

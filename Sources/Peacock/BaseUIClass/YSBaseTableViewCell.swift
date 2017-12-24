@@ -148,10 +148,10 @@ open class YSBaseTableViewCell: UITableViewCell {
             make.width.equalTo(UI.screenWidth).priority(999)
         }
 
-        self.contentView.setContentHuggingPriority(999, for: .vertical)
+        self.contentView.setContentHuggingPriority(UILayoutPriority(rawValue: 999), for: .vertical)
 //        self.contentView.setContentCompressionResistancePriority(1000, forAxis: .Vertical)
-        self.contentView.setContentHuggingPriority(999, for: .horizontal)
-        self.contentView.setContentCompressionResistancePriority(999, for: .horizontal)
+        self.contentView.setContentHuggingPriority(UILayoutPriority(rawValue: 999), for: .horizontal)
+        self.contentView.setContentCompressionResistancePriority(UILayoutPriority(rawValue: 999), for: .horizontal)
 
 
         self.didSetup = true

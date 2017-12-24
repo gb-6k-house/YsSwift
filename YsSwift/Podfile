@@ -1,51 +1,73 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
+inhibit_all_warnings!
+
+
+use_frameworks!
+
 target 'YsSwift' do
     # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
     use_frameworks!
     pod 'Result', '~> 3.0'
 end
-
-
-target 'Rabbit' do
-    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-    use_frameworks!
-    # Pods for Peacock
-    pod 'Moya/RxSwift', '8.0.5'
-    pod 'RxCocoa'
-    pod 'SnapKit', '3.2.0'
+def devDependecies
+    pod 'Moya', '9.0.0'
+    pod 'RxSwift', '4.0.0'
+    pod 'RxCocoa', '4.0.0'
+    pod 'SnapKit', '~> 4.0.0'
     pod 'ObjectMapper', '2.1.0'
     pod 'SwiftyJSON', '~> 3.1.1'
-    pod 'IQKeyboardManagerSwift', '~> 4.0.13'
+    pod 'IQKeyboardManagerSwift', '5.0.0'
     pod 'libPhoneNumber-iOS', '~> 0.8'
-    pod 'FCUUID'
-    pod 'MJRefresh'
-    pod 'FDFullscreenPopGesture'
+    pod 'FCUUID', '1.3.1'
+    pod 'MJRefresh','~> 3.1.15.1'
+    pod 'FDFullscreenPopGesture', '~> 1.1'
 end
 
+target 'Rabbit' do
+    use_frameworks!
+    devDependecies
+    project './YsSwift.xcodeproj'
+end
 
 target 'Peacock' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
-  # Pods for Peacock
-  pod 'Moya/RxSwift', '8.0.5'
-  pod 'RxCocoa'
-  pod 'SnapKit', '3.2.0'
-  pod 'ObjectMapper', '2.1.0'
-  pod 'SwiftyJSON', '~> 3.1.1'
-  pod 'IQKeyboardManagerSwift', '~> 4.0.13'
-  pod 'libPhoneNumber-iOS', '~> 0.8'
-  pod 'FCUUID'
-  pod 'MJRefresh'
-  pod 'FDFullscreenPopGesture'
+    use_frameworks!
+    devDependecies
+    project './YsSwift.xcodeproj'
 end
+
+#abstract_target 'LibApp' do
+#    # Has its own copy of LibApp
+#    pod 'Moya', '9.0.0'
+#    pod 'RxSwift', '4.0.0'
+#    pod 'RxCocoa', '4.0.0'
+#    pod 'SnapKit', '~> 4.0.0'
+#    pod 'ObjectMapper', '2.1.0'
+#    pod 'SwiftyJSON', '~> 3.1.1'
+#    pod 'IQKeyboardManagerSwift', '5.0.0'
+#    pod 'libPhoneNumber-iOS', '~> 0.8'
+#    pod 'FCUUID', '1.3.1'
+#    pod 'MJRefresh','~> 3.1.15.1'
+#    pod 'FDFullscreenPopGesture', '~> 1.1'
+#    target 'Rabbit' do
+#        use_frameworks!
+#        project './YsSwift.xcodeproj'
+#    end
+#
+#    target 'Peacock' do
+#        use_frameworks!
+#        project './YsSwift.xcodeproj'
+#    end
+#end
+
+
 
 #配置pod工程中swift版本
 post_install do |installer|
     installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-            config.build_settings['SWIFT_VERSION'] = '3.0'
+            config.build_settings['SWIFT_VERSION'] = '4.0'
         end
     end
 end

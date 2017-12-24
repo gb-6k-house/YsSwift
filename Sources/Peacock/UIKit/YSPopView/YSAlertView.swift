@@ -93,8 +93,8 @@ open class YSAlertView: YSPopupView {
         self.snp.makeConstraints { (make) in
             make.width.equalTo(Config.width)
         }
-        self.setContentCompressionResistancePriority(UILayoutPriorityRequired, for: .vertical)
-        self.setContentHuggingPriority(UILayoutPriorityFittingSizeLevel, for: .horizontal)
+        self.setContentCompressionResistancePriority(UILayoutPriority.required, for: .vertical)
+        self.setContentHuggingPriority(UILayoutPriority.fittingSizeLevel, for: .horizontal)
 
         var lastAttribute = self.snp.top
 
