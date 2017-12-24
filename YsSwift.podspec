@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YsSwift"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "Variable Solutions written in Swift"
   s.description  = <<-DESC
   YsSwift. supply variable function classes  written in Swift .for examples:
