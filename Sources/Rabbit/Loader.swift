@@ -1,10 +1,10 @@
-//
-//  Loader.swift
-//  Rabbit
-//
-//  Created by niupark on 2017/10/16.
-//  Copyright © 2017年 尧尚信息科技. All rights reserved.
-//
+/******************************************************************************
+ ** auth: liukai
+ ** date: 2017/7
+ ** ver : 1.0
+ ** desc:  说明
+ ** Copyright © 2017年 尧尚信息科技(www.yourshares.cn). All rights reserved
+ ******************************************************************************/
 
 import Foundation
 #if YSSWIFT_DEBUG
@@ -18,13 +18,23 @@ public protocol Loading {
 }
 
 
-public final class Loader: Loading {
+public final class Loader: Loading, ServerTrust {
+    public var trustedHosts: Set<String>?{
+        set{
+            LoaderSessionDelegate.shared.trustedHosts = newValue
+        }
+        get{
+            return LoaderSessionDelegate.shared.trustedHosts
+        }
+    }
     private let loader: DataLoading
     private let decoder: DataDecoding
     //单例对象
-    public static let shared: Loading = Loader(loader: LoaderDeduplicator(loader:  DataLoader()))
+    public static let shared: Loading = Loader(loader: LoaderDeduplicator(loader:  DataLoader(configuration: DataLoader.defaultConfiguration,
+                                                                                              delegate: LoaderSessionDelegate.shared ,
+                                                                                              scheduler:  DataLoader.defaultScheduler)))
 
-    public init(loader: DataLoading, decoder: DataDecoding = DataDecoder()) {
+    private init(loader: DataLoading, decoder: DataDecoding = DataDecoder()) {
         self.loader = loader
         self.decoder = decoder
 

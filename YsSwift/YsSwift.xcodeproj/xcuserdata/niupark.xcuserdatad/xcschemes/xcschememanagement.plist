@@ -12,12 +12,12 @@
 		<key>Peacock.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>18</integer>
 		</dict>
 		<key>Rabbit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>19</integer>
 		</dict>
 		<key>YsSwift.xcscheme</key>
 		<dict>

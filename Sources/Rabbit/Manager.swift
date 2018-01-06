@@ -16,13 +16,17 @@ import Result
 //网络图片加载管理类
 //完成如下流程: 数据从网络中下载 ->数据缓存本地(硬盘+内存) ->  数据解析成图片 -> 返回上层应用
 public final class Manager {
-    public let loader: Loading
+    public var loader: Loading
     public let cache: Cache<ImageCache.CachedImage>?
-   //单例对象
+    public let defauleLoader : Loader = {
+        return Loader.shared as! Loader
+    }()
+    /// A set of trusted hosts when receiving server trust challenges.
+   //single instance
     public static let shared = Manager(loader: Loader.shared, cache: ImageCache.shared)
     
-   //初始化
-    private init(loader: Loading, cache: Cache<ImageCache.CachedImage>? = nil) {
+   //
+    public init(loader: Loading, cache: Cache<ImageCache.CachedImage>? = nil) {
         self.loader = loader
         self.cache = cache
     }

@@ -19,7 +19,7 @@ open class YSPasscodeField: UIControl, UIKeyInput {
                 
                 if passcode.characters.count > numberOfDigits {
                     let endOfString = passcode.index(passcode.startIndex, offsetBy: numberOfDigits)
-                    passcode = passcode.substring(to: endOfString)
+                    passcode = String(passcode[..<endOfString])
                 }
                 
                 relayout()
@@ -164,7 +164,7 @@ open class YSPasscodeField: UIControl, UIKeyInput {
                 
                 let start = passcode.index(passcode.startIndex, offsetBy: i)
                 let end = passcode.index(start, offsetBy: 1)
-                let number = passcode.substring(with:start..<end)
+                let number = String(passcode[start..<end])
                 label.text = isSecureTextEntry ? "●" : number
                 label.textColor = textColor
                 
@@ -213,9 +213,8 @@ open class YSPasscodeField: UIControl, UIKeyInput {
         guard passcode.characters.count > 0 else {
             return
         }
-        passcode = passcode.substring(to: passcode.index(before: passcode.endIndex))
+        passcode = String( passcode[..<passcode.index(before: passcode.endIndex)])
     }
-    
     public var isSecureTextEntry: Bool {
         @objc(isSecureTextEntry) get {
             return isSecure

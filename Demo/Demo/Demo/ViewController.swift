@@ -8,6 +8,8 @@
 
 import UIKit
 import YsSwift
+import SDWebImage
+import Kingfisher
 
 public extension YSSwift where Base: NSDate {
     public func weak(len: String = "en") -> String {
@@ -33,7 +35,19 @@ class ViewController: YSBaseViewController {
         super.viewDidLoad()
         let ysKit = YSKitTest()
         ysKit.testString()
-        self.imageView.ys.loadImage(with: URL(string: "http://www.easyicon.net/api/resizeApi.php?id=1100251&size=128")!, placeholder: UIImage(named:"rabbit_1"))
+//        self.imageView.ys.loadImage(with: URL(string: "http://www.easyicon.net/api/resizeApi.php?id=1100251&size=128")!, placeholder: UIImage(named:"rabbit_1"))
+        
+        YsSwift.Manager.shared.defauleLoader.trustedHosts = ["iot.comba.com.cn"]
+        
+        self.imageView.ys.loadImage(with: URL(string: "https://iot.comba.com.cn:8443/load/excel/1514535279235.png")!, placeholder: UIImage(named:"rabbit_1"))
+
+        
+        let url = URL(string: "https://iot.comba.com.cn:8443/load/excel/1514535279235.png")
+        self.nukeImageView.kf.setImage(with: url)
+        
+        self.sdImageView.sd_setImage(with:  URL(string: "https://iot.comba.com.cn:8443/load/excel/1514535279235.png"), placeholderImage: UIImage(named:"rabbit_1"), options: .allowInvalidSSLCertificates, completed: nil)
+        
+        self.sdImageView.sd_setImage(with:  URL(string: "https://iot.comba.com.cn:8443/load/excel/1514535279235.png"), placeholderImage: UIImage(named:"rabbit_1"), completed: nil)
 
     }
 
@@ -44,7 +58,7 @@ class ViewController: YSBaseViewController {
 
     @IBAction func refreshAction(_ sender: Any) {
         
-        self.imageView.ys.loadImage(with: URL(string: "http://www.easyicon.net/api/resizeApi.php?id=1100251&size=128")!)
+        self.imageView.ys.loadImage(with: URL(string: "https://iot.comba.com.cn:8443/load/excel/1514535279235.png")!, placeholder: UIImage(named:"rabbit_1"))
      }
 }
 

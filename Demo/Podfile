@@ -12,6 +12,8 @@ target 'Demo' do
 #  pod 'YsSwift/Rabbit', :path => "../"
   pod 'YsSwift/Rabbit',    :path => "../"
   pod 'YsSwift/Peacock',   :path => "../"
+  pod 'SDWebImage', '~> 4.2.3'
+  pod 'Kingfisher', '~> 4.6.1'
 end
 
 #配置pod工程中swift版本

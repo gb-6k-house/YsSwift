@@ -19,14 +19,15 @@ public protocol DataLoading {
 
 }
 
-public final class DataLoader: DataLoading {
+public final class DataLoader: NSObject, DataLoading {
     
     public let session: URLSession
     private let scheduler: AsyncScheduler
-    
+    public var sessionDelegate: SessionDelegate?
     public init(configuration: URLSessionConfiguration = DataLoader.defaultConfiguration,
+                delegate: SessionDelegate = SessionDelegate() ,
                 scheduler: AsyncScheduler = DataLoader.defaultScheduler) {
-        self.session = URLSession(configuration: configuration)
+        self.session = URLSession(configuration: configuration, delegate: delegate, delegateQueue: nil)
         self.scheduler = scheduler
     }
     
@@ -68,4 +69,5 @@ public final class DataLoader: DataLoading {
         }
     }
 }
+
 
