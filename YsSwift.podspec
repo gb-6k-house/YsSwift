@@ -22,9 +22,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.ios.deployment_target = '9.0'
 
-  # s.source       = { :git => "https://github.com/gb-6k-house/YsSwift.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/gb-6k-house/YsSwift.git", :tag => s.version }
   # s.source       = { :git => "https://github.com/gb-6k-house/YsSwift.git", :commit => "2e8cf21"}
-  s.source       = { :git => "https://github.com/gb-6k-house/YsSwift.git", :branch => "master"}
+  # s.source       = { :git => "https://github.com/gb-6k-house/YsSwift.git", :branch => "master"}
 
   s.default_subspec = "Animal"
 
