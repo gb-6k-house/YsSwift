@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "YsSwift"
-  s.version      = "1.0.1"
+  s.version      = "1.1.0"
   s.summary      = "Variable Solutions written in Swift"
   s.description  = <<-DESC
   YsSwift. supply variable function classes  written in Swift .for examples:
@@ -22,7 +22,9 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.ios.deployment_target = '9.0'
 
-  s.source       = { :git => "https://github.com/gb-6k-house/YsSwift.git", :tag => s.version }
+  # s.source       = { :git => "https://github.com/gb-6k-house/YsSwift.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/gb-6k-house/YsSwift.git", :commit => "2e8cf21"}
+
   s.default_subspec = "Animal"
 
   s.subspec "Animal" do |ss|

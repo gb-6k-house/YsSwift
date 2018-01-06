@@ -43,7 +43,7 @@ your Swift version.
 
 | Swift | YsSwfit       | Rabbit        |
 | ----- | ------------- |---------------|
-| 4.X   | >= 1.0.1      | >= 1.0.1      |
+| 4.X   | >= 1.1.0      | >= 1.1.0      |
 | 3.X   | >=0.3.3       | >=0.3.3       |
 
 **Search with `pod search YsSwift`**
