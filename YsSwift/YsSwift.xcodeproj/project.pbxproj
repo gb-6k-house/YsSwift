@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E2850EA3F5FE664BE648800 /* Pods_Rabbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709DED53B24746AD2785B35F /* Pods_Rabbit.framework */; };
 		7B86F7191FC2D0710018C573 /* Peacock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86F7181FC2D0710018C573 /* Peacock.swift */; };
 		7B86F7571FC2D35A0018C573 /* Rabbit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B86F7551FC2D35A0018C573 /* Rabbit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B86F75B1FC2D37A0018C573 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87B91F949B2A006A02BA /* Cache.swift */; };
@@ -90,6 +91,7 @@
 		2B9605920F2D170173254135 /* Pods-LibApp-YsSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibApp-YsSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LibApp-YsSwift/Pods-LibApp-YsSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		3578DFAFAF07465AD2AF5132 /* Pods-Rabbit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rabbit.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Rabbit/Pods-Rabbit.debug.xcconfig"; sourceTree = "<group>"; };
 		5E54626B044EFED1CBC23154 /* Pods-LibApp-Peacock.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibApp-Peacock.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibApp-Peacock/Pods-LibApp-Peacock.release.xcconfig"; sourceTree = "<group>"; };
+		709DED53B24746AD2785B35F /* Pods_Rabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75571DC80B066DFFCD0A9686 /* Pods-LibApp-Rabbit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibApp-Rabbit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibApp-Rabbit/Pods-LibApp-Rabbit.release.xcconfig"; sourceTree = "<group>"; };
 		7B16915C1F9A2C35007010C0 /* UIButton+Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Target.swift"; sourceTree = "<group>"; };
 		7B86F7181FC2D0710018C573 /* Peacock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peacock.swift; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E2850EA3F5FE664BE648800 /* Pods_Rabbit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +454,7 @@
 			children = (
 				A755192FA4CC6096364C9F9E /* Pods_YsSwift.framework */,
 				124FCFB694358494D598957E /* Pods_Peacock.framework */,
+				709DED53B24746AD2785B35F /* Pods_Rabbit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
