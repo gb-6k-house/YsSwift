@@ -8,9 +8,7 @@
 
 import Foundation
 import UIKit
-#if YSSWIFT_DEBUG
-    import YsSwift
-#endif
+import YsSwift
 
 extension YSSwift where Base: UIView {
     public var viewController: UIViewController? {

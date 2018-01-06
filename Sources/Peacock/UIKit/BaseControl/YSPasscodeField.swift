@@ -213,8 +213,7 @@ open class YSPasscodeField: UIControl, UIKeyInput {
         guard passcode.characters.count > 0 else {
             return
         }
-       passcode = String(passcode[..<passcode.endIndex])
-        
+        passcode = passcode.substring(to: passcode.index(before: passcode.endIndex))
     }
     
     public var isSecureTextEntry: Bool {

@@ -7,9 +7,7 @@
  ******************************************************************************/
 
 import UIKit
-#if YSSWIFT_DEBUG
-    import YsSwift
-#endif
+import YsSwift
 
 
 public extension UIImage {

@@ -7,9 +7,7 @@
  ******************************************************************************/
 
 import libPhoneNumber_iOS
-#if YSSWIFT_DEBUG
-    import YsSwift
-#endif
+import YsSwift
 
 
 

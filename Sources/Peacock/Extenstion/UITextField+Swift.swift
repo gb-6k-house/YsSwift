@@ -7,9 +7,7 @@
 //
 
 import Foundation
-#if YSSWIFT_DEBUG
-    import YsSwift
-#endif
+import YsSwift
 
 extension YSSwift where Base: UITextField {
     

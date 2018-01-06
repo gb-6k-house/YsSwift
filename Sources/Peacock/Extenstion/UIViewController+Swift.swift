@@ -9,9 +9,7 @@
 
 import Foundation
 import UIKit
-#if YSSWIFT_DEBUG
-    import YsSwift
-#endif
+import YsSwift
 
 
 
@@ -19,7 +17,7 @@ public extension YSSwift where Base: UIViewController {
 
    public func push(_ vc: UIViewController, animated: Bool = true, withdata:Any? = nil) {
         // 此处navigation可能为空
-        // log.debug("TopViewController.navigation \(self.base.navigationController)")
+        // log.debug("TopViewC ontroller.navigation \(self.base.navigationController)")
         if let ysVC = vc as? YSBaseViewController {
             ysVC.beforePush(withdata)
         }
@@ -48,6 +46,10 @@ public extension YSSwift where Base: UIViewController {
             }
             _ = self.base.navigationController?.popViewController(animated: animated)
         }
+    }
+    
+    public func pop(of aClass: Swift.AnyClass, animated: Bool = true, withdata: Any? = nil) {
+        self.pop(self.findController(of: aClass), animated: animated, withdata: withdata)
     }
     
     public func findController(of aClass: Swift.AnyClass) -> UIViewController? {

@@ -12,11 +12,11 @@ import Result
 
 open class YSNetWorkManager: NSObject {
     
-    static let endpointClosure = { (target: YSStructTarget) -> Moya.Endpoint<YSStructTarget> in
+    static let endpointClosure = { (target: YSTargetRequest) -> Moya.Endpoint<YSTargetRequest> in
         
         let url = target.baseURL.appendingPathComponent(target.path).absoluteString
         
-        let endpoint = Moya.Endpoint<YSStructTarget>(
+        let endpoint = Moya.Endpoint<YSTargetRequest>(
             url: url,
             sampleResponseClosure: {
                 .networkResponse(200, target.sampleData)
@@ -28,7 +28,7 @@ open class YSNetWorkManager: NSObject {
         return endpoint
     }
     
-    static let requestClosure = { (endpoint: Moya.Endpoint<YSStructTarget>, done: MoyaProvider<YSStructTarget>.RequestResultClosure) in
+    static let requestClosure = { (endpoint: Moya.Endpoint<YSTargetRequest>, done: MoyaProvider<YSTargetRequest>.RequestResultClosure) in
         // Using the `as!` forced type cast operator is safe here,
         // as `mutableCopy()` will always return the correct type.
         
@@ -48,7 +48,7 @@ open class YSNetWorkManager: NSObject {
     public static func setHeaders(headers:[String: String]? ) {
         self.headers = headers
     }
-    public static var provider = MoyaProvider<YSStructTarget>(
+    public static var provider = MoyaProvider<YSTargetRequest>(
         endpointClosure: endpointClosure,
         requestClosure: requestClosure
     )

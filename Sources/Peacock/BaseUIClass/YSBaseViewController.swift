@@ -65,6 +65,8 @@ open class YSBaseViewController: UIViewController, UINavigationBarDelegate {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        self.setup()
+
     }
     
     override open func viewDidLoad() {
@@ -93,7 +95,7 @@ open class YSBaseViewController: UIViewController, UINavigationBarDelegate {
         NotificationCenter.default.removeObserver(self)
     }
     
-    open func customNavigationConfig(_ config: YSNavagtionConfig) {
+    open func customNavigationConfig(_ config: YSNavagtionConfig, navItem:UINavigationItem) {
         
     }
     
@@ -186,11 +188,12 @@ open class YSBaseViewController: UIViewController, UINavigationBarDelegate {
         if self.showCustomNavigationBar {
             
             let config = YSNavagtionConfig()
-            self.customNavigationConfig(config)
+            self.customTitleItem = UINavigationItem(title: self.title ?? " ")
+            self.customNavigationConfig(config, navItem: self.customTitleItem!)
             
             self.customNavigationBar = _BaseUINavigationBar(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 64)).ys.customize { (view) in
                 
-                self.customTitleItem = UINavigationItem(title: self.title ?? " ").ys.customize({ (view) in
+                self.customTitleItem!.ys.customize({ (view) in
                     if config.showback {
                         let backButton: UIButton = UIButton().ys.customize { (view) in
                             if let image = UIImage(named: config.backImage){
@@ -210,6 +213,7 @@ open class YSBaseViewController: UIViewController, UINavigationBarDelegate {
                         view.leftBarButtonItems = [UI.barFixedSpace, UIBarButtonItem(customView: backButton)]
                         
                     }
+            
                     
                 })
                 
