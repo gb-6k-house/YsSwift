@@ -4,7 +4,7 @@ os:
 osx_image: xcode9
 podfile: YsSwift/Podfile
 install:
-  - pod install --repo-update
+  - pod install --project-directory=./YsSwift/ --repo-update
 script:
   - set -o pipefail
   - xcodebuild -version
