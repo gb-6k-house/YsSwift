@@ -25,6 +25,9 @@ public final class CancellationTokenSource {
     public init(lock: Lock) {
         self.lock = lock
     }
+    public convenience init () {
+        self.init(lock: CancellationTokenSource.lock)
+    }
     
     public static let lock = Lock()
 

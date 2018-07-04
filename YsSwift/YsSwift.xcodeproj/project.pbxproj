@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E2850EA3F5FE664BE648800 /* Pods_Rabbit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 709DED53B24746AD2785B35F /* Pods_Rabbit.framework */; };
+		7B393FC9205E7BFC004D43A5 /* WebFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B393FC8205E7BFC004D43A5 /* WebFile.swift */; };
 		7B86F7191FC2D0710018C573 /* Peacock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B86F7181FC2D0710018C573 /* Peacock.swift */; };
 		7B86F7571FC2D35A0018C573 /* Rabbit.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B86F7551FC2D35A0018C573 /* Rabbit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7B86F75B1FC2D37A0018C573 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBE87B91F949B2A006A02BA /* Cache.swift */; };
@@ -96,6 +97,7 @@
 		709DED53B24746AD2785B35F /* Pods_Rabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		75571DC80B066DFFCD0A9686 /* Pods-LibApp-Rabbit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LibApp-Rabbit.release.xcconfig"; path = "Pods/Target Support Files/Pods-LibApp-Rabbit/Pods-LibApp-Rabbit.release.xcconfig"; sourceTree = "<group>"; };
 		7B16915C1F9A2C35007010C0 /* UIButton+Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Target.swift"; sourceTree = "<group>"; };
+		7B393FC8205E7BFC004D43A5 /* WebFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebFile.swift; sourceTree = "<group>"; };
 		7B86F7181FC2D0710018C573 /* Peacock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Peacock.swift; sourceTree = "<group>"; };
 		7B86F7531FC2D35A0018C573 /* Rabbit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Rabbit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B86F7551FC2D35A0018C573 /* Rabbit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rabbit.h; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 		7BBE87B01F949B2A006A02BA /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				7B393FC8205E7BFC004D43A5 /* WebFile.swift */,
 				7BBE87B11F949B2A006A02BA /* DataLoader.swift */,
 				7BBE87B21F949B2A006A02BA /* Request.swift */,
 				7BBE87EE1F94B05F006A02BA /* LoaderDeduplicator.swift */,
@@ -776,6 +779,7 @@
 				7BBE87E01F949B59006A02BA /* String+YS.swift in Sources */,
 				7BBE87E11F949B59006A02BA /* UIImage+YS.swift in Sources */,
 				7BBE87E21F949B59006A02BA /* UIView+YS.swift in Sources */,
+				7B393FC9205E7BFC004D43A5 /* WebFile.swift in Sources */,
 				7BBE87E31F949B59006A02BA /* YSSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

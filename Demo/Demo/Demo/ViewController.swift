@@ -31,9 +31,11 @@ class ViewController: YSBaseViewController {
     @IBOutlet weak var nukeImageView: UIImageView!
     @IBOutlet weak var sdImageView: UIImageView!
     let button = UIButton()
+    var webFile: WebFile?
     override func viewDidLoad() {
         super.viewDidLoad()
         let ysKit = YSKitTest()
+        //http://bmob-cdn-15714.b0.upaiyun.com/2018/03/14/5327e93efaf44364883e7eefd021efb5.zip
         ysKit.testString()
 //        self.imageView.ys.loadImage(with: URL(string: "http://www.easyicon.net/api/resizeApi.php?id=1100251&size=128")!, placeholder: UIImage(named:"rabbit_1"))
         
@@ -48,7 +50,13 @@ class ViewController: YSBaseViewController {
         self.sdImageView.sd_setImage(with:  URL(string: "https://iot.comba.com.cn:8443/load/excel/1514535279235.png"), placeholderImage: UIImage(named:"rabbit_1"), options: .allowInvalidSSLCertificates, completed: nil)
         
         self.sdImageView.sd_setImage(with:  URL(string: "https://iot.comba.com.cn:8443/load/excel/1514535279235.png"), placeholderImage: UIImage(named:"rabbit_1"), completed: nil)
+        self.webFile = WebFile(with: Request(url: URL(string: "http://bmob-cdn-15714.b0.upaiyun.com/2018/03/14/5327e93efaf44364883e7eefd021efb5.zip")!))
+        self.webFile?.download(completion: { (url) in
+            print("下载完成")
 
+        }) { (progress) in
+            print("当前进度\(progress)")
+        }
     }
 
     override func didReceiveMemoryWarning() {
